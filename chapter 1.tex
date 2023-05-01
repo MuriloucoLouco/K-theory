@@ -1,0 +1,162 @@
+\chapter{\scshape Vector Bundles}
+
+\section{Basic definitions.}\label{sec:1.1} We shall develop the theory of \textit{complex} vector bundles only, though much of the elementary theory is the same for real and symplectic bundles. Therefore, by vector space, we shall always understand complex vector space unless otherwise specified. \par
+
+Let $X$ be a topological space. A \textit{family of vector spaces over} $X$ is a topological space $E$, together with:
+\begin{enumerate}[(i)]
+\item a continuous map $p: E \to X$
+\item a finite dimensional vector space structure on each
+    \begin{equation}
+    E_x = p^{-1}(x) \qquad \text{for } x \in X \text{,}
+    \end{equation}
+compatible with the topology on $E_x$ induced from $E$.
+\end{enumerate}
+
+The map $p$ is called the projection map, the space $E$ is called the total space of the family, the space $X$ is called the base space of the family, and if $x \in X$, $E_x$ is called the fiber over $x$. \par
+
+A \textit{section} of a family $p: E \to X$ is a continuous map $s: X \to E$ such that $p \circ s(x) = x$ for all $x \in X$. \par
+
+\pagebreak
+A \textit{homomorphism} from one family $p: E \to X$ to another family $q: F \to X$ is a continuous map $\varphi: E \to F$ such that:
+\begin{enumerate}[(i)]
+\item $q \circ \varphi = p$
+\item for each $x \in X$, $\varphi: E_x \to F_x$ is a linear map of vector spaces.
+\end{enumerate}
+
+We say that $\varphi$ is an \textit{isomorphism} if $\varphi$ is bijective and $\varphi^{-1}$ is continuous. If there exists an isomorphism between $E$ and $F$, we say that they are isomorphic. \par
+
+\textbf{Example 1.} Let $V$ be a vector space, and let $E = X \times V$, $p: E \to X$ be the projection onto the first factor. $E$ is called the \textit{product family} with fiber $V$. If $F$ is any family which is isomorphic to some product family, $F$ is said to be a \textit{trivial} family. \par
+
+If $Y$ is a subspace of $X$, and if $E$ is a family of vector spaces over $X$ with projection $p$, $p: p^{-1}(Y) \to Y$ is clearly a family over $Y$. We call it the \textit{restriction} of $E$ to $Y$, and denote it by $E \vert Y$. More generally, if $Y$ is any space, and $f: Y \to X$ is a continuous map, then we define the induced family $f^*(p): f^*(E) \to Y$ as follows: \par
+
+$f^*(E)$ is the subspace of $Y \times E$ consisting of all points $(y, e)$ such that $f(y) = p(e)$, together with the obvious projection maps and vector space structures on the fibers. If $g: Z \to Y$, then there is a natural isomorphism $g^* f^*(E) \cong (fg)^*(E)$ given by sending each point of the form $(z, e)$ into the point $(z, g(z), e)$, where $z \in Z$, $e \in E$. If $f: Y \to X$ is an inclusion map, clearly there is an isomorphism $E \vert Y \cong f^*(E)$ given by sending each $e \in E$ into the corresponding $(p(e), e)$.
+
+A family $E$ of vector spaces over $X$ is said to be \textit{locally trivial} if every $x \in X$ posesses a neighborhood $U$ such that $E \vert U$ is trivial. A locally trivial family will also be called a \textit{vector bundle}. A trivial family will be called a trivial bundle. If $f: Y \to X$, and if $E$ is a vector bundle over $X$, it is easy to see that $f^*(E)$ is a vector bundle over $Y$. We shall call $f^*(E)$ the induced bundle in this case. \par \pagebreak
+
+\textbf{Example 2.} Let $V$ be a vector space, and let $X$ be its associated projective space. We define $E \subset X \times V$ to be the set of all $(x, v)$ such that $x \in X$, $v \in V$, and $v$ lies in the line determining $x$. We leave it to the reader to show that $E$ is actually a vector bundle. \par
+
+Notice that if $E$ is a vector bundle over $X$, then $\dim(E_x)$ is a locally constant function on $X$, and hence is a constant on each connected component of $X$. If $\dim(E_x)$ is a constant on the whole of $X$, then $E$ is said to have a dimension, and the dimension of $E$ is the common number $\dim(E_x)$ for all $x$. (Caution: the dimension of $E$ so defined is usually different from the dimension of $E$ as a topological space.) \par
+
+Since a vector bundle is locally trivial, any section of a vector bundle is locally described by a vector valued function on the base space. If $E$ is a vector bundle, we denote by $\Gamma(E)$ the set of all sections of $E$. Since the set of functions on a space with values in a fixed vector space is itself a vector space, we see that $\Gamma(E)$ is a vector space in a natural way. \par 
+
+Suppose that $V, W$ are vector spaces, and that $E = X \times V$, $F = X \times W$ are the corresponding product bundles. Then any homomorphism $\varphi: E \to F$ determines a map $\Phi: X \to \Hom(V, W)$ by the formula $\varphi(x, v) = (x,  \Phi(x)v)$. Moreover, if we give $\Hom(V, W)$ its usual topology, then $\Phi$ is continuous; conversely, any such continuous map $\Phi: X \to \Hom(V, W)$ determines a homomorphism $\varphi: E \to F$. (This is most easily seen by taking bases ${e_i}$ and ${f_i}$ for $V$ and $W$ respectively. Then each $\Phi(x)$ is represented by a matrix $\Phi(x)_{i,j}$, where
+\begin{equation}
+ \Phi(x)e_i = \sum_j \Phi(x)_{i,j} f_j
+\end{equation}
+The continuity of either $\varphi$ or $\Phi$ is equivalent to the continuity
+of the functions $\Phi(x)_{i,j}$.) \par 
+
+Let $\Iso(V, W) \subset \Hom(V, W)$ be the subspace of all isomorphisms between $V$ and $W$. Clearly, $\Iso(V, W)$ is an open set in $\Hom(V, W)$. Further, the inverse map $T \to T^{-1}$ gives us a continuous map $\Iso(V, W) \to \Iso(W, V)$. Suppose that $\varphi: E \to F$ is such that $\varphi_x: E_x \to F_x$ is an isomorphism for all $x \in X$. This is equivalent to the statement that $\Phi(x) \subset \Iso(V, W)$. The map $x \to \Phi(x)^{-1}$ defines $\Psi: X \to \Iso(W, V)$, which is continuous. Thus the corresponding map $\psi: F \to E$ is continuous. Thus $\varphi: E \to F$ is an isomorphism if and only if it is bijective or, equivalently, $\varphi$ is an isomorphism if and only if each $\varphi_x$ is an isomorphism. Further, since $\Iso(V, W)$ is open in $\Hom(V, W)$, we see that for any homomorphism $\varphi$, the set of those points $x \in X$ for which $\varphi_x$ is an isomorphism form an open subset of $X$. All of these assertions are local in nature, and therefore are valid for vector bundles as well as for trivial families. \par \hfill
+
+\textbf{Remark:} The finite dimensionality of $V$ is basic to the previous argument. If one wants to consider infinite dimensional vector bundles, then one must distinguish between the different operator topologies on $\Hom(V, W)$. \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Operations on vector bundles.} \label{sec:1.2}  Natural operations on vector spaces, such as direct sum and tensor product, can be extended to vector bundles. The only troublesome question is how one should topologize the resulting spaces. We shall give a general method for extending operations from vector spaces to vector bundles which will handle all of these problems uniformly. \par 
+
+Let $T$ be a functor which carries finite dimensional vector spaces into finite dimensional vector spaces. For simplicity, we assume that $T$ is a covariant functor of one variable. Thus, to every vector space $V$, we have an associated vector space $T(V)$. We shall say that $T$ is a \textit{continuous functor} if for all $V$ and $W$ , the map $T: \Hom(V, W) \to \Hom(T(V), T(W))$ is continuous. \par 
+
+If $E$ is a vector bundle, we define the set $T(E)$ to be the union
+\begin{equation}
+\bigcup_{x \in X} T(E_x) \text{,}
+\end{equation}
+and, if $\varphi: E \to F$, we define $T(\varphi): T(E) \to T(F)$ by the maps $T(\varphi_x): T(E_x) \to T(F_x)$. What we must show is that $T(E)$ has a natural topology, and that, in this topology, $T(\varphi_x)$ is continuous. \par 
+
+We begin by defining $T(E)$ in the case that $E$ is a product bundle. If $E = X \times V$, we define $T(E)$ to be $X \times T(V)$ in the product topology. Suppose that $F = X \times W$, and that $\varphi: E \to F$ is a homomorphism. Let $\Phi: X \to \Hom(V, W)$ be the corresponding map. Since, by hypothesis, $T: \Hom(V, W) \to \Hom(T(V), T(W))$ is continuous, $T\Phi: X \to \Hom(T(V), T(W))$ is continuous. Thus $T(\varphi): X \times T(V) \to X \times T(W)$ is also continuous. If $\varphi$ is an isomorphism, then $T\varphi$ will be an isomorphism since it is continuous and an isomorphism on each fiber. \par 
+
+Now suppose that $E$ is trivial, but has no preferred product structure. Choose an isomorphism $\alpha: E \to X \times V$ , and topologize $T(E)$ by requiring $T(\alpha): T(E) \to X \times T(V)$ to be a homeomorphism. If $\beta: E \to X \times W$ is any other isomorphism, by letting $\varphi = \beta \alpha^{-1}$ above, we see that $T(\alpha)$ and $T(\beta)$ induce the same topology on $T(E)$, since $T(\varphi) = T(\beta)T(\alpha)^{-l}$ is a homeomorphism. Thus, the topology on $E$ does not depend on the choice of $\alpha$. Further, if $Y \subset X$, it is clear that the topology on $T(E) \vert Y$ is the same as that on $T(E \vert Y)$. Finally, if $\varphi: E \to F$ is a homomorphism of trivial bundles, we see that $T(\varphi): T(E) \to T(F)$ is continuous, and therefore is a homomorphism. \par
+
+Now suppose that $E$ is any vector bundle. Then if $U \subset X$ is such that $E \vert U$ is trivial, we topologize $T(E \vert U)$ as above. We topologize $T(E)$ by taking for the open sets, those subsets $V \subset T(E)$ such that $V \cap (T(E) \vert U)$ is open in $T(E \vert U)$ for all open $U \subset X$ for which $E \vert U$ is trivial. The reader can now easily verify that if $Y \subset X$, the topology on $T(E \vert Y)$ is the same as that on $T(E) \vert Y$, and that, if $\varphi: E \to F$ is any homomorphism, $T(\varphi): T(E) \to T(F)$ is also a homomorphism. \par 
+
+If $f: Y \to X$ is a continuous map and $E$ is a vector bundle over $X$ then, for any continuous functor $T$, we have a natural isomorphism
+\begin{equation}
+f^* T(E) \cong T f^*(E) \text{.}
+\end{equation}
+
+The case when $T$ has several variables both covariant and contravariant, proceeds similarly. Therefore we can define for vector bundles $E, F$ corresponding bundles:
+
+\begin{enumerate}[(i)]
+\item $E \oplus F$, their direct sum
+\item $E \otimes F$, their tensor product
+\item $\Hom(E, F)$
+\item $E^*$, the dual bundle of E
+\item $\lambda^i(E)$, where $\lambda^i$ is the $i^{\text{th}}$ exterior power.
+\end{enumerate}
+
+We also obtain natural isomorphisms
+
+\begin{enumerate}[(i)]
+\item $E \oplus F \cong F \oplus E$
+\item $E \otimes F \cong F \otimes E$
+\item $E \otimes (F' \oplus F'') \cong (E \otimes F') \oplus (E \otimes F'')$
+\item $\Hom(E, F) \cong E^* \otimes F$
+\item $\lambda^k(E \oplus F) \cong \bigoplus_{i+j=k} (\lambda^i(E) \otimes \lambda^j(F))$
+\end{enumerate}
+\pagebreak
+
+Finally, notice that sections of $\Hom(E, F)$ correspond in a 1 - 1 fashion with homomorphisms $\varphi: E \to F$. We therefore define $\HOM(E, F)$ to be the vector space of all homomorphisms from $E$ to $F$, and make the identification $\HOM(E,F) = \Gamma(\Hom(E,F))$. \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Sub-bundles and quotient bundles.}\label{sec:1.3} Let $E$ be a vector bundle. A \textit{sub-bundle} of $E$ is a subset of $E$ which is a bundle in the induced structure. \par 
+
+A homomorphism $\varphi: F \to E$ is called a \textit{monomorphism} (respectively \textit{epimorphism}) if each $\varphi_x: F_x \to E_x$ is a monomorphism (respectively epimorphism). Notice that $\varphi: F \to E$ is a monomorphism if and only if $\varphi^*: F^* \to E^*$ is an epimorphism. If $F$ is a sub-bundle of $E$, and if $\varphi: F \to E$ is the inclusion map, then $\varphi$ is a monomorphism. \par 
+
+\subsection{LEMMA}\label{lem:1.3.1} \textit{ If $\varphi: F \to E$ is a monomorphism, then $\varphi(F)$ is a sub-bundle of $E$, and $\varphi: F \to \varphi(F)$ is an isomorphism.} \par 
+
+\textbf{Proof:} $\varphi: F \to \varphi(F)$ is a bijection, so if $\varphi(F)$ is a sub-bundle, $\varphi$ is an isomorphism. Thus we need only show that $\varphi(F)$ is a sub-bundle. \par 
+
+The problem is local, so it suffices to consider the case when $E$ and $F$ are product bundles. Let $E = X \times V$ and let $x \in X$; choose $W_x \subset V$ to be a subspace complementary to $\varphi(F_x)$. $G = X \times W_x$ is a sub-bundle of E. Define $\theta: F \oplus G \to E$ by $\theta(a \oplus b) = \varphi(a) + i(b)$, where $i: G \to E$ is the inclusion. By construction, $\theta_x$ is an isomorphism. Thus, there exists an open neighborhood $U$ of $x$ such that $\theta \vert U$ is an isomorphism. $F$ is a sub-bundle of $F \oplus G$. so $\theta(F) = \varphi(F)$ is a sub-bundle of $\theta(F \oplus G) = E$ on $U$. \par 
+
+Notice that in our argument, we have shown more than we have stated. We have shown that if $\varphi: F \to E$, then the set of points for which $\varphi_x$ is a monomorphism form an open set. Also, we have shown that, locally, a sub-bundle is direct summand. This second fact allows us to define quotient bundles. \par 
+
+\subsection{DEFINITION}. If $F$ is a sub-bundle of $E$, the quotient bundle $E/F$ is the union of all the vector spaces $E_x/F_x$ given the quotient topology. \par 
+
+Since $F$ is locally a direct summand in $E$, we see that $E/F$ is locally trivial, and thus is a bundle. This justifies the terminology. \par 
+
+If $\varphi: F \to E$ is an arbitrary homomorphism, the function $\dimension(\kernel(\varphi_x))$ need not be constant, or even locally constant. \par 
+
+\subsection{DEFINITION} $\varphi: F \to E$ is said to be a \textit{strict} homomorphism if $\dimension(\kernel(\varphi_x))$ is locally constant. \par 
+
+\subsection{PROPOSITION}. If $\varphi: F \to E$ is strict, then:
+\begin{enumerate}[(i)]
+\item $\kernel(\varphi) = \bigcup_x \kernel(\varphi_x)$ is a sub-bundle of F
+\item $\image(\varphi) = \bigcup_x \image(\varphi_x)$ is a sub-bundle of E
+\item $\cokernel(\varphi) = \bigcup_x \cokernel(\varphi_x)$ is a bundle in the quotient structure.
+\end{enumerate}
+
+\textbf{Proof:} Notice that (ii) implies (iii). We first prove (ii). The problem is local, so we can assume $F = X \times V$ for some $V$. Given $x \in X$ , we choose $W_x \subset V$ complementary to $\ker(\varphi_x)$ in $V$. Put $G = X \times W_x$; then $\varphi$ induces, by composition with the inclusion, a homomorphism, $\psi: G \to E$, such that $\psi_x$ is a monomorphism. Thus, $\psi$ is a monomorphism in some neighborhood $U$ of $x$. Therefore, $\psi(G) \vert U$ is a sub-bundle of $E \vert U$. However, $\psi(G) \subset \varphi(F)$, and since $\dim(\varphi(F_y))$ is constant for all $y$, and $\dim(\psi(G_y)) = \dim(\psi(G_x)) = \dim(\varphi(F_x)) = \dim(\varphi(F_y))$ for all $y \in U$, $\psi(G) \vert U = \varphi(F) \vert U$. Thus $\varphi(F)$ is a sub-bundle of E. \par 
+
+Finally, we must prove (i). Clearly, $\varphi^*: E^* \to F^*$ is strict. Since $F^* \to \coker(\varphi^*)$ is an epimorphism, $ (\coker(\varphi^*))^* \to F^{**} $ is a monomorphism. However, for each $x$ we have a natural commutative diagram:
+
+\begin{center}
+\begin{tikzcd}
+\ker(\varphi_x) \arrow[d] \arrow[r] & F_x \arrow[d] \\
+(\coker \varphi_x^*)^* \arrow[r]    & F_x^{**}     
+\end{tikzcd}
+\end{center}
+
+in which the vertical arrows are isomorphisms. Thus $\ker(\varphi) \cong (\coker(\varphi^*))^*$ and so, by (\ref{lem:1.3.1}), is a sub-bundle of $F$. \par 
+
+Again, we have proved something more than we have stated. Our argument shows that for any $x \in X$, $\dim \varphi_x(F_x) \leq \dim \varphi_y(F_y)$ for all $y \in U$, $U$ some neighborhood of $x$. Thus, \textit{$\rank(\varphi_x)$ is an upper semi-continuous function of $x$}. \par 
+
+\subsection{DEFINITION} A projection operator $P: E \to E$ is a homomorphism such that $P^2 = P$. \par
+
+Notice that $\rank(P_x) + \rank(1 - P_x) = \dim E_x$ so that, since both $\rank(P_x)$ and $\rank(1 - P_x)$ are upper semi-continuous functions of $x$, they are locally constant. Thus both $P$ and $1 - P$ are strict homomorphisms. Since $\ker(P) = (1 - P)E$, $E$ is the direct sum of the two sub-bundles $PE$ and $(1 - P)E$. Thus any projection operator $P: E \to E$ determines a direct sum decomposition $E = (PE) \oplus ((1 - P)E)$. \par 
+
+We now consider metrics on vector bundles. We define a functor $\Herm$ which assigns to each vector space $V$ the vector space $\Herm(V)$ of all Hermitian forms on $V$. By the techniques of \cref{sec:1.2}, this allows us to define a vector bundle $\Herm(E)$ for every bundle $E$. \par 
+
+\subsection{DEFINITION} A \textit{metric} on a bundle $E$ is any section $h: X \to \Herm(E)$ such that $h(x)$ is positive definite for all $x \in X$. A bundle with a specified metric is called a Hermitian bundle. \par 
+
+Suppose that $E$ is a bundle, $F$ is a sub-bundle of $E$, and that $h$ is a Hermitian metric on $E$. Then for each $x \in X$ we consider the orthogonal projection $P_x: E_x \to F_x$ defined by the metric. This defines a map $P: E \to F$ which we shall now check is continuous. The problem being local we may assume $F$ is trivial, so that we have sections $f_1, \ldots, f_n$ of $F$ giving a basis in each fiber. Then for $v \in F_x$ we have
+\begin{equation}
+P_x(v) = \sum_i h_x(v, f_i(x))f_i(x)
+\end{equation}
+
+Since $h$ is continuous this implies that $P$ is continuous. Thus P is a projection operator on $E$. If $F_x^\bot$ is the subspace of $E_x$ which is orthogonal to $F$ under $h$, we see that $F^\bot = \bigcup_x F_x^\bot$ is the kernel of $P$, and thus is a sub-bundle of $E$, and that $E \cong F \oplus F^\bot$. Thus, a metric provides any sub-bundle with a definite complementary sub-bundle. \par \pagebreak
+
+\textbf{Remark:} So far, most of our arguments have been of a very general nature, and we could have replaced "continuous" with "algebraic", "differentiable", "analytic", etc. without any trouble. In the next section, our arguments become less general. \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vector bundles on compact spaces.}

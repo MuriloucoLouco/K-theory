@@ -159,4 +159,46 @@ Since $h$ is continuous this implies that $P$ is continuous. Thus P is a project
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Vector bundles on compact spaces.}
+\section{Vector bundles on compact spaces. }In order to proceed further, we must make some restriction on the sort of base spaces which we consider. We shall assume from now on that our base spaces are \textit{compact Hausdorff}. We leave it to the reader to notice which results hold for more general base spaces. \par 
+
+Recall that if $f: X \to V$ is a continuous vector-valued function the support of $f$ (written $\supp f$) is the closure of $f^{-1}(V - \{0\})$. \par
+
+We need the following results from point set topology. We state them in vector forms which are clearly equivalent to the usual forms: \par \hfill
+
+\textbf{Tietze Extension Theorem.} Let $X$ be a normal space, $Y \subset X$ a closed subspace, $V$ a real vector space, and $f: Y \to V$ a continuous map. Then there exists a continuous map $g: X \to V$ such that $g \vert Y = f$. \par 
+
+\textbf{Existence of Partitions of Unity.} Let $X$ be a compact Hausdorff space, $\{U_i\}$ a finite open covering. Then there exist continuous maps $f_i : X \to \mathbb{R}$ such that:
+\begin{enumerate}
+    \item $f_i \geq 0$ \qquad all $x \in X$
+    \item $\supp (f_i) \subset U_i$
+    \item $\sum_i f_i(x) = 1$ \qquad all $x \in X$
+\end{enumerate}
+
+Such a collection $\{f_i\}$ is called a \textit{partition of unity}. \par
+We first give a bundle form of the Tietze extension theorem. \par
+
+\subsection{LEMMA} \textit{Let $X$ be compact Hausdorff, $Y \subset X$ a closed subspace, and $E$ a bundle over $X$. Then any section $s: Y \to E \vert Y$ can be extended to $X$.} \par 
+
+\textbf{Proof:} Let $s \in \Gamma(E \vert Y)$. Since, locally, $s$ is a vector-valued function, we can apply the Tietze extension theorem to show that for each $x \in X$, there exists an open set $U$ containing $x$ and $t \in \Gamma(E \vert U)$ such that $t \vert U \cap Y = s \vert U \cap Y$. Since $X$ is compact, we can find a finite subcover $\{U_\alpha \}$ by such open sets. Let $t_\alpha \in \Gamma(E \vert U_\alpha)$ be the corresponding sections and let $\{p_\alpha\}$ be a partition of unity with $\supp(p_\alpha) \in U_\alpha$. We define $S_\alpha \in \Gamma(E)$ by
+\begin{equation}
+S_\alpha =
+    \begin{cases}
+    p_\alpha(x) t_\alpha(x) & \text{if $x \in U_\alpha$} \\
+    0 & \text{otherwise.}\end{cases}
+\end{equation}
+Then $\sum S_\alpha$ is a section of $E$ and its restriction to $Y$ is clearly $s$.
+
+\subsection{LEMMA}\label{lem:1.4.2} \textit{Let $Y$ be a closed subspace of a compact Hausdorff space $X$, and let $E, F$ be two vector bundles over $X$. If $f: E \vert Y \to F \vert Y$ is an isomorphism, then there exists an opet set $U$ containing $Y$ and an extension $f: E \vert U \to F \vert U$ which is an isomorphism.} \par 
+
+\textbf{Proof:} $f$ is a section of $\Hom(E \vert Y, F \vert Y)$, and thus, extends to a section of $\Hom(E, F)$. Let $U$ be the set of those points for which this map is an isomorphism. Then $U$ is open and contains $Y$.
+
+\subsection{LEMMA} \textit{Let $Y$ be a compact Hausdorff space, $f_t: Y \to X \\ (0 \leq t \leq 1)$ a homotopy and $E$ a vector bundle over $X$. Then}
+\begin{equation}
+f_0^*E \cong f_1^*E.
+\end{equation}
+
+\textbf{Proof:} If $I$ denotes the unit interval, let $f: Y \times I \to X$ be the homotopy, so that $f(y, t) = f_t(y)$, and let $\pi: Y \times I \to Y$ denote the projection. Now apply \ref{lem:1.4.2} to the bundles $f^*E, \pi^* f_t^* E$ and the subspace $Y \times \{t\}$ of $Y \times I$, on which the re is an obvious isomorphism $s$. By the compactness of $Y$ we deduce that $f^*E$ and $\pi^* f_t^* E$ are isomorphic in some strip $Y \times \delta t$ where $\delta t$ denotes a neighborhood of $\{t\}$ in $I$. Hence the isomorphism class of $f_t^*E$ is a locally constant function of $t$. Since $I$ is connected this implies it is constant, whence
+\begin{equation}
+f_0^*E \cong f_1^*E.
+\end{equation}
+We shall use $\Vect(X)$ to denote the set of isomorphism classes of vector bundles on $X$, and $\Vect_n(X)$ to denote the subset of $\Vect(X)$ given by bundles of dimension $n$. $\Vect(X)$ is an abelian semi-group under the operation $\oplus$. In $\Vect_n(X)$ we have one naturally distinguished element - the class of the trivial bundle of dimension $n$.

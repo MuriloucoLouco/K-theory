@@ -6,9 +6,9 @@ Let $X$ be a topological space. A \textit{family of vector spaces over} $X$ is a
 \begin{enumerate}[(i)]
     \item a continuous map $p: E \to X$
     \item a finite dimensional vector space structure on each
-    \begin{equation}
+    \begin{equation*}
         E_x = p^{-1}(x) \qquad \text{for } x \in X \text{,}
-    \end{equation}
+    \end{equation*}
     compatible with the topology on $E_x$ induced from $E$.
 \end{enumerate}
 
@@ -40,9 +40,9 @@ Notice that if $E$ is a vector bundle over $X$, then $\dim(E_x)$ is a locally co
 Since a vector bundle is locally trivial, any section of a vector bundle is locally described by a vector valued function on the base space. If $E$ is a vector bundle, we denote by $\Gamma(E)$ the set of all sections of $E$. Since the set of functions on a space with values in a fixed vector space is itself a vector space, we see that $\Gamma(E)$ is a vector space in a natural way. \par 
 
 Suppose that $V, W$ are vector spaces, and that $E = X \times V$, $F = X \times W$ are the corresponding product bundles. Then any homomorphism $\varphi: E \to F$ determines a map $\Phi: X \to \Hom(V, W)$ by the formula $\varphi(x, v) = (x,  \Phi(x)v)$. Moreover, if we give $\Hom(V, W)$ its usual topology, then $\Phi$ is continuous; conversely, any such continuous map $\Phi: X \to \Hom(V, W)$ determines a homomorphism $\varphi: E \to F$. (This is most easily seen by taking bases ${e_i}$ and ${f_i}$ for $V$ and $W$ respectively. Then each $\Phi(x)$ is represented by a matrix $\Phi(x)_{i,j}$, where
-\begin{equation}
+\begin{equation*}
     \Phi(x)e_i = \sum_j \Phi(x)_{i,j} f_j
-\end{equation}
+\end{equation*}
 The continuity of either $\varphi$ or $\Phi$ is equivalent to the continuity
 of the functions $\Phi(x)_{i,j}$.) \par 
 
@@ -57,9 +57,9 @@ Let $\Iso(V, W) \subset \Hom(V, W)$ be the subspace of all isomorphisms between 
 Let $T$ be a functor which carries finite dimensional vector spaces into finite dimensional vector spaces. For simplicity, we assume that $T$ is a covariant functor of one variable. Thus, to every vector space $V$, we have an associated vector space $T(V)$. We shall say that $T$ is a \textit{continuous functor} if for all $V$ and $W$ , the map $T: \Hom(V, W) \to \Hom(T(V), T(W))$ is continuous. \par 
 
 If $E$ is a vector bundle, we define the set $T(E)$ to be the union
-\begin{equation}
+\begin{equation*}
     \bigcup_{x \in X} T(E_x) \text{,}
-\end{equation}
+\end{equation*}
 and, if $\varphi: E \to F$, we define $T(\varphi): T(E) \to T(F)$ by the maps $T(\varphi_x): T(E_x) \to T(F_x)$. What we must show is that $T(E)$ has a natural topology, and that, in this topology, $T(\varphi_x)$ is continuous. \par 
 
 We begin by defining $T(E)$ in the case that $E$ is a product bundle. If $E = X \times V$, we define $T(E)$ to be $X \times T(V)$ in the product topology. Suppose that $F = X \times W$, and that $\varphi: E \to F$ is a homomorphism. Let $\Phi: X \to \Hom(V, W)$ be the corresponding map. Since, by hypothesis, $T: \Hom(V, W) \to \Hom(T(V), T(W))$ is continuous, $T\Phi: X \to \Hom(T(V), T(W))$ is continuous. Thus $T(\varphi): X \times T(V) \to X \times T(W)$ is also continuous. If $\varphi$ is an isomorphism, then $T\varphi$ will be an isomorphism since it is continuous and an isomorphism on each fiber. \par 
@@ -69,9 +69,9 @@ Now suppose that $E$ is trivial, but has no preferred product structure. Choose 
 Now suppose that $E$ is any vector bundle. Then if $U \subset X$ is such that $E \vert U$ is trivial, we topologize $T(E \vert U)$ as above. We topologize $T(E)$ by taking for the open sets, those subsets $V \subset T(E)$ such that $V \cap (T(E) \vert U)$ is open in $T(E \vert U)$ for all open $U \subset X$ for which $E \vert U$ is trivial. The reader can now easily verify that if $Y \subset X$, the topology on $T(E \vert Y)$ is the same as that on $T(E) \vert Y$, and that, if $\varphi: E \to F$ is any homomorphism, $T(\varphi): T(E) \to T(F)$ is also a homomorphism. \par 
 
 If $f: Y \to X$ is a continuous map and $E$ is a vector bundle over $X$ then, for any continuous functor $T$, we have a natural isomorphism
-\begin{equation}
+\begin{equation*}
     f^* T(E) \cong T f^*(E) \text{.}
-\end{equation}
+\end{equation*}
 
 The case when $T$ has several variables both covariant and contravariant, proceeds similarly. Therefore we can define for vector bundles $E, F$ corresponding bundles:
 
@@ -149,9 +149,9 @@ We now consider metrics on vector bundles. We define a functor $\Herm$ which ass
 \subsection{DEFINITION} A \textit{metric} on a bundle $E$ is any section $h: X \to \Herm(E)$ such that $h(x)$ is positive definite for all $x \in X$. A bundle with a specified metric is called a Hermitian bundle. \par 
 
 Suppose that $E$ is a bundle, $F$ is a sub-bundle of $E$, and that $h$ is a Hermitian metric on $E$. Then for each $x \in X$ we consider the orthogonal projection $P_x: E_x \to F_x$ defined by the metric. This defines a map $P: E \to F$ which we shall now check is continuous. The problem being local we may assume $F$ is trivial, so that we have sections $f_1, \ldots, f_n$ of $F$ giving a basis in each fiber. Then for $v \in F_x$ we have
-\begin{equation}
+\begin{equation*}
     P_x(v) = \sum_i h_x(v, f_i(x))f_i(x)
-\end{equation}
+\end{equation*}
 
 Since $h$ is continuous this implies that $P$ is continuous. Thus P is a projection operator on $E$. If $F_x^\bot$ is the subspace of $E_x$ which is orthogonal to $F$ under $h$, we see that $F^\bot = \bigcup_x F_x^\bot$ is the kernel of $P$, and thus is a sub-bundle of $E$, and that $E \cong F \oplus F^\bot$. Thus, a metric provides any sub-bundle with a definite complementary sub-bundle. \par \pagebreak
 
@@ -177,15 +177,16 @@ We need the following results from point set topology. We state them in vector f
 Such a collection $\{f_i\}$ is called a \textit{partition of unity}. \par
 We first give a bundle form of the Tietze extension theorem. \par
 
-\subsection{LEMMA} \textit{Let $X$ be compact Hausdorff, $Y \subset X$ a closed subspace, and $E$ a bundle over $X$. Then any section $s: Y \to E \vert Y$ can be extended to $X$.} \par 
+\subsection{LEMMA}\label{lem:1.4.1} \textit{Let $X$ be compact Hausdorff, $Y \subset X$ a closed subspace, and $E$ a bundle over $X$. Then any section $s: Y \to E \vert Y$ can be extended to $X$.} \par 
 
 \textbf{Proof:} Let $s \in \Gamma(E \vert Y)$. Since, locally, $s$ is a vector-valued function, we can apply the Tietze extension theorem to show that for each $x \in X$, there exists an open set $U$ containing $x$ and $t \in \Gamma(E \vert U)$ such that $t \vert U \cap Y = s \vert U \cap Y$. Since $X$ is compact, we can find a finite subcover $\{U_\alpha \}$ by such open sets. Let $t_\alpha \in \Gamma(E \vert U_\alpha)$ be the corresponding sections and let $\{p_\alpha\}$ be a partition of unity with $\supp(p_\alpha) \in U_\alpha$. We define $S_\alpha \in \Gamma(E)$ by
-\begin{equation}
+\begin{equation*}
 S_\alpha =
     \begin{cases}
-    p_\alpha(x) t_\alpha(x) & \text{if $x \in U_\alpha$} \\
-    0 & \text{otherwise.}\end{cases}
-\end{equation}
+        p_\alpha(x) t_\alpha(x) & \text{if $x \in U_\alpha$} \\
+        0 & \text{otherwise.}
+    \end{cases}
+\end{equation*}
 Then $\sum S_\alpha$ is a section of $E$ and its restriction to $Y$ is clearly $s$.
 
 \subsection{LEMMA}\label{lem:1.4.2} \textit{Let $Y$ be a closed subspace of a compact Hausdorff space $X$, and let $E, F$ be two vector bundles over $X$. If $f: E \vert Y \to F \vert Y$ is an isomorphism, then there exists an opet set $U$ containing $Y$ and an extension $f: E \vert U \to F \vert U$ which is an isomorphism.} \par 
@@ -193,14 +194,14 @@ Then $\sum S_\alpha$ is a section of $E$ and its restriction to $Y$ is clearly $
 \textbf{Proof:} $f$ is a section of $\Hom(E \vert Y, F \vert Y)$, and thus, extends to a section of $\Hom(E, F)$. Let $U$ be the set of those points for which this map is an isomorphism. Then $U$ is open and contains $Y$.
 
 \subsection{LEMMA}\label{lem:1.4.3} \textit{Let $Y$ be a compact Hausdorff space, $f_t: Y \to X \\ (0 \leq t \leq 1)$ a homotopy and $E$ a vector bundle over $X$. Then}
-\begin{equation}
+\begin{equation*}
     f_0^*E \cong f_1^*E.
-\end{equation}
+\end{equation*}
 
 \textbf{Proof:} If $I$ denotes the unit interval, let $f: Y \times I \to X$ be the homotopy, so that $f(y, t) = f_t(y)$, and let $\pi: Y \times I \to Y$ denote the projection. Now apply (\ref{lem:1.4.2}) to the bundles $f^*E, \pi^* f_t^* E$ and the subspace $Y \times \{t\}$ of $Y \times I$, on which the re is an obvious isomorphism $s$. By the compactness of $Y$ we deduce that $f^*E$ and $\pi^* f_t^* E$ are isomorphic in some strip $Y \times \delta t$ where $\delta t$ denotes a neighborhood of $\{t\}$ in $I$. Hence the isomorphism class of $f_t^*E$ is a locally constant function of $t$. Since $I$ is connected this implies it is constant, whence
-\begin{equation}
+\begin{equation*}
 f_0^*E \cong f_1^*E.
-\end{equation}
+\end{equation*}
 We shall use $\Vect(X)$ to denote the set of isomorphism classes of vector bundles on $X$, and $\Vect_n(X)$ to denote the subset of $\Vect(X)$ given by bundles of dimension $n$. $\Vect(X)$ is an abelian semi-group under the operation $\oplus$. In $\Vect_n(X)$ we have one naturally distinguished element - the class of the trivial bundle of dimension $n$.
 
 \subsection{LEMMA}\label{lem:1.4.4}
@@ -209,64 +210,165 @@ We shall use $\Vect(X)$ to denote the set of isomorphism classes of vector bundl
     \item \textit{If $X$ is contractible, every bundle over $X$ is trivial and $\Vect(X)$ is isomorphic to the non-negative integers.}
 \end{enumerate}
 
-\subsection{LEMMA} \textit{If $E$ is a bundle over $X \times I$, and $\pi: X \times I \to X \times \{0\}$ is the projection, $E$ is isomorphic to $\pi^*(E \vert X \times \{0\})$.} \par 
+\subsection{LEMMA}\label{lem:1.4.5} \textit{If $E$ is a bundle over $X \times I$, and $\pi: X \times I \to X \times \{0\}$ is the projection, $E$ is isomorphic to $\pi^*(E \vert X \times \{0\})$.} \par 
 
 Both of these lemmas are immediate consequences of (\ref{lem:1.4.3}). \par \hfill
 
 Suppose now $Y$ is closed in $X$, $E$ is a vector bundle over $X$ and $\alpha: E \vert Y \to Y \times V$ is an isomorphism. We refer to $\alpha$ as a \textit{trivialization of $E$ over $Y$}. Let $\pi: Y \times V \to V$ denote the projection and define an equivalence relation on $E \vert Y$ by
-\begin{equation}
+\begin{equation*}
     e \sim e' \iff \pi \alpha (e) = \pi \alpha (e')
-\end{equation}
+\end{equation*}
 
 We extend this by the identity on $E \vert X - Y$ and we let $E/\alpha$. denote the quotient space of $E$ given by this equivalence relation. It has a natural structure of a family of vector spaces over $X/Y$. We assert that $E/\alpha$. is in fact a vector bundle. To see this we have only to verify the local triviality at the base point $Y/Y$ of $X/Y$. Now by (\ref{lem:1.4.2}) we can extend $\alpha$ to an isomorphism $\alpha: E \vert U \to U \times V$ for some open set $U$ containing $Y$. Then $\alpha$ induces an isomorphism
-\begin{equation}
+\begin{equation*}
     (E \vert U) / \alpha \cong (U/Y) \times V
-\end{equation}
+\end{equation*}
 which establishes the local triviality of $E/\alpha$. \par
 
 Suppose $\alpha_0, \alpha_1$ are homotopic trivializations of $E$ over $Y$. This means that we have a trivialization $\beta$ of $E \times I$ over $Y \times I \subset X \times I$ inducing $\alpha_0$ and $\alpha_1$ at the two end points of $I$. Let $f: (X \times Y) \times I \to (X \times I)/(Y \times I)$ be the natural map. Then $f^*(E \times I/\beta)$ is a bundle on $(X/Y) \times I$ whose restriction to $(X/Y) \times \{i\}$ is $E/\alpha_i \quad (i = 0, 1)$. Hence, by (\ref{lem:1.4.3}),
-\begin{equation}
+\begin{equation*}
     E/\alpha_0 \cong  E/\alpha_1.
-\end{equation}
+\end{equation*}
 
 To summarize we have established \par
 
-\subsection{LEMMA} A trivialization $\alpha$ of a bundle $E$ over $Y \subset X$ defines a bundle $E/\alpha$ over $X/Y$. The isomorphism class of $E/\alpha$ depends only on the homotopy class of $\alpha$. \par 
+\subsection{LEMMA}\label{lem:1.4.7} \textit{A trivialization $\alpha$ of a bundle $E$ over $Y \subset X$ defines a bundle $E/\alpha$ over $X/Y$. The isomorphism class of $E/\alpha$ depends only on the homotopy class of $\alpha$.} \par 
 
 Using this we shall now prove \par
 
-\subsection{LEMMA} Let $Y \subset X$ be a closed contractible subspace. Then $f: X \to X/Y$ induces a bijection $f^*: \Vect(X) \to \Vect(X/Y)$. \par 
+\subsection{LEMMA}\label{lem:1.4.8} \textit{Let $Y \subset X$ be a closed contractible subspace. Then $f: X \to X/Y$ induces a bijection $f^*: \Vect(X) \to \Vect(X/Y)$.} \par 
 
 \textbf{Proof:} Let $E$ be a bundle on $X$ then by (\ref{lem:1.4.4}) $E \vert Y$ is trivial. Thus trivializations $\alpha: E \vert Y \to Y \times V$ exist. Moreover, two such trivializations differ by an automorphism of $Y \times V$, i.e., by a map $Y \to \GL(V)$. But $\GL(V) = \GL(n,C)$ is connected and $V$ is contractible. Thus $\alpha$ is unique up to homotopy and so the isomorphism class of $E \vert \alpha$ is uniquely determined by that of $E$. Thus we have constructed a map
-\begin{equation}
+\begin{equation*}
     \Vect(X) \to \Vect(X/Y)
-\end{equation}
+\end{equation*}
 and this is clearly a two-sided inverse for $f^*$. Hence $f^*$ is bijective as asserted. \par 
 
 Vector bundles are frequently constructed by a glueing or clutching construction which we shall now describe. Let
-\begin{equation}
+\begin{equation*}
     X = X_1 \cup X_2, \qquad A = X_1 \cap X_2,
-\end{equation}
+\end{equation*}
 all the spaces being compact. Assume that $E_i$ is a vector bundle over $X_i$ and that $\varphi: E_1 \vert A \to E_2 \vert A $ is an isomorphism. Then we define the vector bundle $E_1 \cup_\varphi E_2$ on $X$ as follows. As a topological space $E_1 \cup_\varphi E_2$ is the quotient of the disjoint sum $E_1 + E_2$ by the equivalence relation which identifies $e_1 \in E_1 \vert A$ with $\phi(e_1) \in E_2 \vert A$. Identifying $X$ with the corresponding quotient of $X_1 + X_2$ we obtain a natural projection $p: E_1 \cup_\varphi E_2 \to X$, and $p^{-1}(x)$ has a natural vector space structure. It remains to show that $E_1 \cup_\varphi E_2$ is locally trivial. Since $E_1 \cup_\varphi E_2 \vert X - A = (E_1 \vert X_1 - A) + (E_2 \vert X_2 - A)$ the local triviality at points $x \notin A$ follows from that of $E_1$ and $E_2$. Therefore, let $a \in A$ and let $V_1$ be a closed neighborhood of $a$ in $X_1$ over which $E_1$ is trivial. so that we have an isomorphism
-\begin{equation}
+\begin{equation*}
     \theta_1: E_1 \vert V_1 \to V_1 \times \mathbb{C}^n.
-\end{equation}
+\end{equation*}
 Restricting to $A$ we get an isomorphism
-\begin{equation}
+\begin{equation*}
     \theta_1^A: E_1 \vert V_1 \cap A \to (V_1 \cap A) \times \mathbb{C}^n.
-\end{equation}
+\end{equation*}
 Let
-\begin{equation}
+\begin{equation*}
     \theta_2^A: E_2 \vert V_1 \cap A \to (V_1 \cap A) \times \mathbb{C}^n.
-\end{equation}
+\end{equation*}
 be the isomorphism corresponding to $\theta_1^A$ under $\varphi$. By (\ref{lem:1.4.2}) this can be extended to an isomorphism
-\begin{equation}
+\begin{equation*}
     \theta_2: E_2 \vert V_2 \to V_2 \times \mathbb{C}^n.
-\end{equation}
+\end{equation*}
 where $V_2$ is a neighborhood of $a$ in $X_2$. The pair $\theta_1, \theta_2$ then defines in an obvious way an isomorphism
-\begin{equation}
+\begin{equation*}
     \theta_1 \cup_\varphi \theta_2: E_1 \cup_\varphi E_2 \vert V_1 \cup V_2 \to (V_1 \cup V_2) \times \mathbb{C}^n.
-\end{equation}
+\end{equation*}
 establishing the local triviality of $E_1 \cup_\varphi E_2$. \par 
 
 Elementary properties of this construction are the following:
+\begin{enumerate}[(i)]
+    \item If $E$ is a bundle over $X$ and $E_i = E \vert X_i$ then the identity defines an isomorphism $I_A: E_1 \vert A \to E_2 \vert A$. and
+    \begin{equation*}
+        E_1 \cup_{I_A} E_2 \cong E.
+    \end{equation*}
+    \item If $\beta_i: E_i \to E_i'$ are isomorphisms on $X_i$ and $\varphi'\beta_1 = \beta_2\varphi$, then
+    \begin{equation*}
+        E_1 \cup_\varphi E_2 \cong  E_1' \cup_{\varphi'} E_2'.
+    \end{equation*}
+    \item $(E_i, \varphi)$ and $(E_i', \varphi')$ are two "clutching data" on the $X_i$, then
+    \begin{equation*}
+        (E_1 \cup_\varphi E_2) \oplus (E_1' \cup_{\varphi'} E_2') \cong E_1 \oplus E_1' \cup_{\varphi \oplus \varphi'} E_2 \oplus E_2',
+    \end{equation*}
+    \begin{equation*}
+        (E_1 \cup_\varphi E_2) \otimes (E_1' \cup_{\varphi'} E_2') \cong E_1 \otimes E_1' \cup_{\varphi \otimes \varphi'} E_2 \otimes E_2',
+    \end{equation*}
+    \begin{equation*}
+        (E_1 \cup_\varphi E_2)^* \cong E_1^* \cup_{(\varphi^*)^{-1}} E_2^*
+    \end{equation*}
+\end{enumerate}
+
+Moreover, we also have
+
+\subsection{LEMMA}\label{lem:1.4.6} \textit{The isomorphism class of $E_1 \cup_\varphi E_2$ depends only on the homotopy class of the isomorphism $\varphi: E_1 \vert A \to E_2 \vert A$.} \par 
+
+\textbf{Proof:} A homotopy of isomorphism $E_1 \vert A \to E_2 \vert A$ means an isomorphism
+\begin{equation*}
+    \Phi: \pi^* E_1 \vert A \times I \to \pi^* E_2 \vert A \times I
+\end{equation*}
+where I is the unit interval and $\pi: X \times I \to X$ is the projection. \par 
+
+Let 
+\begin{equation*}
+    f_t: X \to X \times I
+\end{equation*}
+be defined by $f_t(x) = x \times \{t\}$ and denote by
+\begin{equation*}
+    \varphi_t: E_1 \vert A \to E_2 \vert A
+\end{equation*}
+the isomorphism induced from $\Phi$ by $f_t$. Then
+\begin{equation*}
+    E_1 \cup_{\varphi_t} E_2 \cong f_t^*(\pi^* E_1 \cup_\Phi \pi^* E_2)
+\end{equation*}
+Since $f_0$ and $f_1$ are homotopic it follows from (\ref{lem:1.4.3}) that
+\begin{equation*}
+    E_1 \cup_{\varphi_0} E_2 \cong E_1 \cup_{\varphi_1} E_2
+\end{equation*}
+as required. \par 
+
+\textbf{Remark:} The "collapsing" and "clutching" constructions for bundles (on $X/Y$ and $X_1 \cup X_2$ respectively) are both special cases of a general process of forming bundles over quotient spaces We leave it as an exercise to the reader to give a precise general formulation. \par 
+
+We shall denote by $[X, Y]$ the set of homotopy classes of maps $X \to Y$. \par 
+
+\subsection{LEMMA}\label{lem:1.4.9} \textit{For any $X$, there is a natural isomorphism $\Vect_n(S(X)) \cong [X, \GL(n, C)]$.} \par 
+
+\textbf{Proof:} Write $S(X)$ as $C^+(X) \cup C^-(X)$, where $C^+(X) = [0, \frac{1}{2}] \times X/\{0\} \times X$, $C^-(X) = [\frac{1}{2}, 1] \times X/\{1\} \times X$. Then $C^+(X) \cap C^-(X) = X$. If $E$ is any $n$-dimensional bundle over $S(X)$, $E \vert C^+(x)$ and $E \vert C^-(x)$ are trivial. Let $\alpha^\pm: E \vert C^\pm(X) \cong C^\pm(X) \times V$ be such isomorphisms. Then $(\alpha^+ \vert X)(\alpha^- \vert X)^{-1}: X \times V \to X \times V$ is a bundle map, and thus defines a map a of $X$ into $\GL(n, \mathbb{C}) = \Iso(V)$. Since both $C^+(X)$ and $C^-(X)$ are contractible, the homotopy classes of both $\alpha^+$ and $\alpha^-$ are well defined, and thus the homotopy class of $\alpha$ is well defined. Thus we have a natural map $\theta: \Vect_n(S(X)) \to [X, \GL(n, \mathbb{C})]$. The clutching construction on the other hand defines by (\ref{1.4.6}) a map
+\begin{equation*}
+    \varphi: [X, \GL(n, C)] \to \Vect_n(S(X))
+\end{equation*}
+It is clear that $\theta$ and $\varphi$ are inverses of each other and so are bijections. \par 
+
+We have just seen that $\Vect_n(S(X))$ has a homotopy theoretic interpretation. We now give a similar interpretation to $\Vect_n(X)$. First we must establish some simple facts about quotient bundles. \par 
+
+\subsection{LEMMA}\label{lem:1.4.10} \textit{Let $E$ be any bundle over $X$. Then there exists a (Hermitian) metric on $E$.} \par 
+
+\textbf{Proof:} A metric on a vector space $V$ defines a metric on the product bundle $X \times V$. Hence metrics exist on trivial bundles. Let $\{U_\alpha\}$ be a finite open covering of $X$ such that $E \vert U_\alpha$ is trivial and let $h_\alpha$ be a metric for $E \vert U_\alpha$. Let $\{p_\alpha\}$ be a partition of unity with $\supp p_\alpha \subset U_\alpha$ and define
+\begin{equation*}
+k_\alpha(x) =
+    \begin{cases}
+        p_\alpha(x) h_\alpha(x) & \text{for $x \in U_\alpha$} \\
+        0 & \text{otherwise.}
+    \end{cases}
+\end{equation*}
+
+Then $k_\alpha$ is a section of $\Herm(E)$ and is positive semi-definite. But for any $x \in X$ there exists $\alpha$ such that $p_\alpha(x) > 0$ (since $\sum p_\alpha = 1$) and so $x \in U_\alpha$. Hence, for this $\alpha$, $k_\alpha(x)$ is positive definite. Hence $\sum_\alpha k_\alpha(x)$ is positive definite for all $x \in X$ and so $\sum k_\alpha$ is a metric for $E$. \par 
+
+A sequence of vector bundle homomorphisms
+\begin{equation*}
+    \begin{tikzcd}
+    {} \arrow[r] & E \arrow[r] & F \arrow[r] & \ldots
+    \end{tikzcd}
+\end{equation*}
+is called \textit{exact} if for each $x \in X$ the sequence of vector space homomorphisms
+\begin{equation*}
+    \begin{tikzcd}
+    {} \arrow[r] & E_x \arrow[r] & F_x \arrow[r] & \ldots
+    \end{tikzcd}
+\end{equation*}
+is exact. \par 
+
+\subsection{COROLLARY} Suppose that \begin{tikzcd} 0 \arrow[r] & E' \arrow[r, "\varphi'"] & E \arrow[r, "\varphi''"] & E'' \arrow[r] & 0\end{tikzcd} is an exact sequence of bundles over $X$. Then there exists an homorphism $E \cong E' \oplus E"$. \par 
+
+\textbf{Proof:} Give $E$ a metric. Then $E \cong E' \oplus (E')^\bot$. However, $(E')^\bot \cong E''$. \par \hfill
+
+A subspace $V \subset \Gamma(E)$ is said to be \textit{ample} if
+\begin{equation*}
+    \varphi: X \times V \to E
+\end{equation*}
+is a surjection, where $\varphi(x, s) = s(x)$.
+
+\subsection{LEMMA}\label{1.4.12}

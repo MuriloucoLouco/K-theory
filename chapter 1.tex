@@ -219,7 +219,7 @@ Suppose now $Y$ is closed in $X$, $E$ is a vector bundle over $X$ and $\alpha: E
     e \sim e' \iff \pi \alpha (e) = \pi \alpha (e')
 \end{equation*}
 
-We extend this by the identity on $E \vert X - Y$ and we let $E/\alpha$. denote the quotient space of $E$ given by this equivalence relation. It has a natural structure of a family of vector spaces over $X/Y$. We assert that $E/\alpha$. is in fact a vector bundle. To see this we have only to verify the local triviality at the base point $Y/Y$ of $X/Y$. Now by (\ref{lem:1.4.2}) we can extend $\alpha$ to an isomorphism $\alpha: E \vert U \to U \times V$ for some open set $U$ containing $Y$. Then $\alpha$ induces an isomorphism
+We extend this by the identity on $E \vert X - Y$ and we let $E/\alpha$ denote the quotient space of $E$ given by this equivalence relation. It has a natural structure of a family of vector spaces over $X/Y$. We assert that $E/\alpha$ is in fact a vector bundle. To see this we have only to verify the local triviality at the base point $Y/Y$ of $X/Y$. Now by (\ref{lem:1.4.2}) we can extend $\alpha$ to an isomorphism $\alpha: E \vert U \to U \times V$ for some open set $U$ containing $Y$. Then $\alpha$ induces an isomorphism
 \begin{equation*}
     (E \vert U) / \alpha \cong (U/Y) \times V
 \end{equation*}
@@ -238,17 +238,17 @@ Using this we shall now prove \par
 
 \subsection{LEMMA}\label{lem:1.4.8} \textit{Let $Y \subset X$ be a closed contractible subspace. Then $f: X \to X/Y$ induces a bijection $f^*: \Vect(X) \to \Vect(X/Y)$.} \par 
 
-\textbf{Proof:} Let $E$ be a bundle on $X$ then by (\ref{lem:1.4.4}) $E \vert Y$ is trivial. Thus trivializations $\alpha: E \vert Y \to Y \times V$ exist. Moreover, two such trivializations differ by an automorphism of $Y \times V$, i.e., by a map $Y \to \GL(V)$. But $\GL(V) = \GL(n,C)$ is connected and $V$ is contractible. Thus $\alpha$ is unique up to homotopy and so the isomorphism class of $E \vert \alpha$ is uniquely determined by that of $E$. Thus we have constructed a map
+\textbf{Proof:} Let $E$ be a bundle on $X$ then by (\ref{lem:1.4.4}) $E \vert Y$ is trivial. Thus trivializations $\alpha: E \vert Y \to Y \times V$ exist. Moreover, two such trivializations differ by an automorphism of $Y \times V$, i.e., by a map $Y \to \GL(V)$. But $\GL(V) = \GL(n, \mathbb{C})$ is connected and $V$ is contractible. Thus $\alpha$ is unique up to homotopy and so the isomorphism class of $E \vert \alpha$ is uniquely determined by that of $E$. Thus we have constructed a map
 \begin{equation*}
     \Vect(X) \to \Vect(X/Y)
 \end{equation*}
-and this is clearly a two-sided inverse for $f^*$. Hence $f^*$ is bijective as asserted. \par 
+and this is clearly a two-sided inverse for $f^*$. Hence $f^*$ is bijective as asserted. \par \hfill
 
 Vector bundles are frequently constructed by a glueing or clutching construction which we shall now describe. Let
 \begin{equation*}
     X = X_1 \cup X_2, \qquad A = X_1 \cap X_2,
 \end{equation*}
-all the spaces being compact. Assume that $E_i$ is a vector bundle over $X_i$ and that $\varphi: E_1 \vert A \to E_2 \vert A $ is an isomorphism. Then we define the vector bundle $E_1 \cup_\varphi E_2$ on $X$ as follows. As a topological space $E_1 \cup_\varphi E_2$ is the quotient of the disjoint sum $E_1 + E_2$ by the equivalence relation which identifies $e_1 \in E_1 \vert A$ with $\phi(e_1) \in E_2 \vert A$. Identifying $X$ with the corresponding quotient of $X_1 + X_2$ we obtain a natural projection $p: E_1 \cup_\varphi E_2 \to X$, and $p^{-1}(x)$ has a natural vector space structure. It remains to show that $E_1 \cup_\varphi E_2$ is locally trivial. Since $E_1 \cup_\varphi E_2 \vert X - A = (E_1 \vert X_1 - A) + (E_2 \vert X_2 - A)$ the local triviality at points $x \notin A$ follows from that of $E_1$ and $E_2$. Therefore, let $a \in A$ and let $V_1$ be a closed neighborhood of $a$ in $X_1$ over which $E_1$ is trivial. so that we have an isomorphism
+all the spaces being compact. Assume that $E_i$ is a vector bundle over $X_i$ and that $\varphi: E_1 \vert A \to E_2 \vert A $ is an isomorphism. Then we define the vector bundle $E_1 \cup_\varphi E_2$ on $X$ as follows. As a topological space $E_1 \cup_\varphi E_2$ is the quotient of the disjoint sum $E_1 + E_2$ by the equivalence relation which identifies $e_1 \in E_1 \vert A$ with $\varphi(e_1) \in E_2 \vert A$. Identifying $X$ with the corresponding quotient of $X_1 + X_2$ we obtain a natural projection $p: E_1 \cup_\varphi E_2 \to X$, and $p^{-1}(x)$ has a natural vector space structure. It remains to show that $E_1 \cup_\varphi E_2$ is locally trivial. Since $E_1 \cup_\varphi E_2 \vert X - A = (E_1 \vert X_1 - A) + (E_2 \vert X_2 - A)$ the local triviality at points $x \notin A$ follows from that of $E_1$ and $E_2$. Therefore, let $a \in A$ and let $V_1$ be a closed neighborhood of $a$ in $X_1$ over which $E_1$ is trivial. so that we have an isomorphism
 \begin{equation*}
     \theta_1: E_1 \vert V_1 \to V_1 \times \mathbb{C}^n.
 \end{equation*}
@@ -324,11 +324,11 @@ as required. \par
 
 We shall denote by $[X, Y]$ the set of homotopy classes of maps $X \to Y$. \par 
 
-\subsection{LEMMA}\label{lem:1.4.9} \textit{For any $X$, there is a natural isomorphism $\Vect_n(S(X)) \cong [X, \GL(n, C)]$.} \par 
+\subsection{LEMMA}\label{lem:1.4.9} \textit{For any $X$, there is a natural isomorphism $\Vect_n(S(X)) \cong [X, \GL(n, \mathbb{C})]$.} \par 
 
-\textbf{Proof:} Write $S(X)$ as $C^+(X) \cup C^-(X)$, where $C^+(X) = [0, \frac{1}{2}] \times X/\{0\} \times X$, $C^-(X) = [\frac{1}{2}, 1] \times X/\{1\} \times X$. Then $C^+(X) \cap C^-(X) = X$. If $E$ is any $n$-dimensional bundle over $S(X)$, $E \vert C^+(x)$ and $E \vert C^-(x)$ are trivial. Let $\alpha^\pm: E \vert C^\pm(X) \cong C^\pm(X) \times V$ be such isomorphisms. Then $(\alpha^+ \vert X)(\alpha^- \vert X)^{-1}: X \times V \to X \times V$ is a bundle map, and thus defines a map a of $X$ into $\GL(n, \mathbb{C}) = \Iso(V)$. Since both $C^+(X)$ and $C^-(X)$ are contractible, the homotopy classes of both $\alpha^+$ and $\alpha^-$ are well defined, and thus the homotopy class of $\alpha$ is well defined. Thus we have a natural map $\theta: \Vect_n(S(X)) \to [X, \GL(n, \mathbb{C})]$. The clutching construction on the other hand defines by (\ref{1.4.6}) a map
+\textbf{Proof:} Write $S(X)$ as $C^+(X) \cup C^-(X)$, where $C^+(X) = [0, \frac{1}{2}] \times X/\{0\} \times X$, $C^-(X) = [\frac{1}{2}, 1] \times X/\{1\} \times X$. Then $C^+(X) \cap C^-(X) = X$. If $E$ is any $n$-dimensional bundle over $S(X)$, $E \vert C^+(x)$ and $E \vert C^-(x)$ are trivial. Let $\alpha^\pm: E \vert C^\pm(X) \cong C^\pm(X) \times V$ be such isomorphisms. Then $(\alpha^+ \vert X)(\alpha^- \vert X)^{-1}: X \times V \to X \times V$ is a bundle map, and thus defines a map $\alpha$ of $X$ into $\GL(n, \mathbb{C}) = \Iso(V)$. Since both $C^+(X)$ and $C^-(X)$ are contractible, the homotopy classes of both $\alpha^+$ and $\alpha^-$ are well defined, and thus the homotopy class of $\alpha$ is well defined. Thus we have a natural map $\theta: \Vect_n(S(X)) \to [X, \GL(n, \mathbb{C})]$. The clutching construction on the other hand defines by (\ref{lem:1.4.6}) a map
 \begin{equation*}
-    \varphi: [X, \GL(n, C)] \to \Vect_n(S(X))
+    \varphi: [X, \GL(n, \mathbb{C})] \to \Vect_n(S(X))
 \end{equation*}
 It is clear that $\theta$ and $\varphi$ are inverses of each other and so are bijections. \par 
 
@@ -371,4 +371,5 @@ A subspace $V \subset \Gamma(E)$ is said to be \textit{ample} if
 \end{equation*}
 is a surjection, where $\varphi(x, s) = s(x)$.
 
-\subsection{LEMMA}\label{1.4.12}
+\subsection{LEMMA}\label{1.4.12} \textit{If $E$ is any bundle over a compact Hausdorff space $X$, then $\Gamma(E)$ contains a finite dimensional ample subspace.} \par 
+

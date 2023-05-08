@@ -14,12 +14,12 @@ Let $X$ be a topological space. A \textit{family of vector spaces over} $X$ is a
 
 The map $p$ is called the projection map, the space $E$ is called the total space of the family, the space $X$ is called the base space of the family, and if $x \in X$, $E_x$ is called the fiber over $x$. \par
 
-A \textit{section} of a family $p: E \to X$ is a continuous map $s: X \to E$ such that $p \circ s(x) = x$ for all $x \in X$. \par
+A \textit{section} of a family $p: E \to X$ is a continuous map $s: X \to E$ such that $ps(x) = x$ for all $x \in X$. \par
 
 \pagebreak
 A \textit{homomorphism} from one family $p: E \to X$ to another family $q: F \to X$ is a continuous map $\varphi: E \to F$ such that:
 \begin{enumerate}[(i)]
-    \item $q \circ \varphi = p$
+    \item $q\varphi = p$
     \item for each $x \in X$, $\varphi: E_x \to F_x$ is a linear map of vector spaces.
 \end{enumerate}
 
@@ -281,15 +281,11 @@ Elementary properties of this construction are the following:
         E_1 \cup_\varphi E_2 \cong  E_1' \cup_{\varphi'} E_2'.
     \end{equation*}
     \item $(E_i, \varphi)$ and $(E_i', \varphi')$ are two "clutching data" on the $X_i$, then
-    \begin{equation*}
-        (E_1 \cup_\varphi E_2) \oplus (E_1' \cup_{\varphi'} E_2') \cong E_1 \oplus E_1' \cup_{\varphi \oplus \varphi'} E_2 \oplus E_2',
-    \end{equation*}
-    \begin{equation*}
-        (E_1 \cup_\varphi E_2) \otimes (E_1' \cup_{\varphi'} E_2') \cong E_1 \otimes E_1' \cup_{\varphi \otimes \varphi'} E_2 \otimes E_2',
-    \end{equation*}
-    \begin{equation*}
-        (E_1 \cup_\varphi E_2)^* \cong E_1^* \cup_{(\varphi^*)^{-1}} E_2^*
-    \end{equation*}
+    \begin{align*}
+        (E_1 \cup_\varphi E_2) \oplus (E_1' \cup_{\varphi'} E_2') &\cong E_1 \oplus E_1' \cup_{\varphi \oplus \varphi'} E_2 \oplus E_2', \\
+        (E_1 \cup_\varphi E_2) \otimes (E_1' \cup_{\varphi'} E_2') &\cong E_1 \otimes E_1' \cup_{\varphi \otimes \varphi'} E_2 \otimes E_2', \\
+        (E_1 \cup_\varphi E_2)^* &\cong E_1^* \cup_{(\varphi^*)^{-1}} E_2^*
+    \end{align*}
 \end{enumerate}
 
 Moreover, we also have
@@ -390,15 +386,15 @@ The $\theta_\alpha$ define a homomorphism
 \begin{equation*}
     \theta: \prod_\alpha V_\alpha \to \Gamma(E)
 \end{equation*}
-and the image of $\theta$ is a finite dimensional 8ubspace of $\Gamma(E)$; in fact, for each $x \in X$ there exists $\alpha$ with $p_\alpha(x) > 0$ and so the map
+and the image of $\theta$ is a finite dimensional subspace of $\Gamma(E)$; in fact, for each $x \in X$ there exists $\alpha$ with $p_\alpha(x) > 0$ and so the map
 \begin{equation*}
     \theta_\alpha(V_\alpha) \to E_x
 \end{equation*}
 is surjective. \par 
 
-\subsection{COROLLARY} \textit{If $E$ is any bundle, there exists an epimorphism $\varphi: X \times \mathbb{C}^m \to E$ for some integer $m$.}
+\subsection{COROLLARY}\label{cor:1.4.13} \textit{If $E$ is any bundle, there exists an epimorphism $\varphi: X \times \mathbb{C}^m \to E$ for some integer $m$.}
 
-\subsection{COROLLARY} \textit{If $E$ is any bundle, there exists a bundle $F$ such that $E \oplus F$ is trivial.} \par 
+\subsection{COROLLARY}\label{cor:1.4.14} \textit{If $E$ is any bundle, there exists a bundle $F$ such that $E \oplus F$ is trivial.} \par 
 
 We are now in a position to prove the existence of a homotopy theoretic definition for $\Vect_n(X)$. We first introduce Grassmann manifolds. If $V$ is any vector space, and $n$ any integer, the set $G_n(V)$ is the set of all subspaces of $V$ of codimension $n$. If $V$ is given some Hermitian metric, each subspace of $V$ determines a projection operator. This defines a map $G_n(V) \to \End(V)$, where $\End(V)$ is the set of endomorphisms of $V$. We give $G_n(V)$ the topology induced by this map. \par 
 
@@ -430,3 +426,34 @@ immediate that
     \lim_{\to m} [X, G_n(\mathbb{C}^m)] \to \Vect_n(X)
 \end{equation*}
 \textit{induced by $f \to f^*(E_{(m)})$ for $f: X \to G_n(\mathbb{C}^m)$, is an isomorphism for all compact Hausdorff spaces $X$.}
+
+\textbf{Proof:} We shall construct an inverse map. If $E$ is a bundle over $X$, there exists (by (\ref{cor:1.4.13})) an epimorphism $\varphi: X \times \mathbb{C}^m \to E$. Let $f: X \to G_n(\mathbb{C}^m)$ be the map induced by $\varphi$. If we can show that the homotopy class of $f$ (in $G_n(V^{m'}$) for $m'$ sufficiently large does not depend on the choice of $\varphi$, then we construct our inverse map $\Vect_n(X) \to [X, G_n(\mathbb{C}^m)]$ by sending $E$ to the homotopy class of $f$. \par 
+
+Suppose that $\varphi_i: X \times \mathbb{C}^{m_i} \to E$ are two epimorphisms $(i = 0, 1)$. Let $g_i: X \to \mathbb{C}^{m_i}$ be the map induced by $\varphi_i$. Define $\psi_t: X \times \mathbb{C}^{m_0} \times \mathbb{C}^{m_1} \to E$ by $\psi(x, v_0, v_1) = (1-t) \varphi_0(x, v_0) + t\varphi_1(x, v_1)$. This is an epimorphism. Let $f_t: X \to G_n(\mathbb{C}^{m_0} \oplus \mathbb{C}^{m_1})$ be the map induced by $\psi_t$. If we identify $\mathbb{C}^{m_0} \oplus \mathbb{C}^{m_1}$ with $\mathbb{C}^{m_0 + m_1}$ by $(z_1, \ldots, z_{m_0}) \oplus (u_1, \ldots, u_{m_1}) \to (z_1, \ldots, z_{m_0}, \ldots, u_{m_1})$ then
+\begin{equation*}
+    f_0 = j_0 g_0, \qquad f_1 = T j_1 g_1,
+\end{equation*}
+where $j_i: G_n(\mathbb{C}^{m_i}) \to G_n(\mathbb{C}^{m_0 + m_1})$ is the natural inclusion and
+\begin{equation*}
+    T: G_n(\mathbb{C}^{m_0 + m_1}) \to G_n(\mathbb{C}^{m_0 + m_1})
+\end{equation*}
+is the map induced by a permutation of coordinates in $\mathbb{C}^{m_0 + m_1}$, and so is homotopic to the identity. Hence $j_1 g_1$ is homotopic to $f_1$ and hence to $j_0 g_0$ as required. \par \hfill
+
+\textbf{Remark:} It is possible to interpret vector bundles as modules in the following way. Let $C(X)$ denote the ring of continuous complex-valued functions on $X$. If $E$ is a vector bundle over $X$ then $\Gamma(E)$ is a $C(X)$-module under point-wise multiplication, i.e.,
+\begin{equation*}
+    fs(x) = f(x)s(x) \qquad f \in C(X), s \in \Gamma(E).
+\end{equation*}
+Moreover a homomorphism $\varphi: E \to F$ determines a $C(X)$-module homomorphism
+\begin{equation*}
+    \Gamma\varphi: \Gamma(E) \to \Gamma(F).
+\end{equation*}
+
+Thus $\Gamma$ is a functor from the category $\mathfrak{V}$ of vector bundles over $X$ to the category $\mathfrak{m}$ of $C(X)$-modules. If $E$ is trivial of dimension $n$. then $\Gamma(E)$ is free of rank $n$. If $F$ is also trivial then
+\begin{equation*}
+    \Gamma: \HOM(E, F) \to \Hom_{C(X)}(\Gamma(E), \Gamma(F))
+\end{equation*}
+is bijective. In fact, choosing isomorphisms $E \cong X \times V$, $F \cong X \times W$ we have
+\begin{align*}
+    \HOM(E, F) \cong \Hom_C(V, W)^X &\cong C(X) \otimes \Hom_C(V, W) \\
+    &\cong \Hom_{C(X)}(\Gamma(E), \Gamma(F))
+\end{align*}

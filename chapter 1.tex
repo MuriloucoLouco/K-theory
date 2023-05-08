@@ -373,3 +373,60 @@ is a surjection, where $\varphi(x, s) = s(x)$.
 
 \subsection{LEMMA}\label{1.4.12} \textit{If $E$ is any bundle over a compact Hausdorff space $X$, then $\Gamma(E)$ contains a finite dimensional ample subspace.} \par 
 
+\textbf{Proof:} Let $\{U_\alpha\}$ be a finite open covering of $X$ so that $E \vert U_\alpha$ is trivial for each $\alpha$, and let $\{p_\alpha\}$ be a partition of unity with $\supp p_\alpha \subset U_\alpha$. Since $E \vert U_\alpha$ is trivial we can find a finite-dimensional ample subspace $V_\alpha \subset \Gamma(E \vert U_\alpha)$. Now define
+\begin{equation*}
+    \theta_\alpha: V_\alpha \to \Gamma(E)
+\end{equation*}
+by
+\begin{equation*}
+\theta_\alpha v_\alpha(x) =
+    \begin{cases}
+        p_\alpha(x) v_\alpha(x) & \text{if $x \in U_\alpha$} \\
+        0 & \text{otherwise.}
+    \end{cases}
+\end{equation*}
+
+The $\theta_\alpha$ define a homomorphism
+\begin{equation*}
+    \theta: \prod_\alpha V_\alpha \to \Gamma(E)
+\end{equation*}
+and the image of $\theta$ is a finite dimensional 8ubspace of $\Gamma(E)$; in fact, for each $x \in X$ there exists $\alpha$ with $p_\alpha(x) > 0$ and so the map
+\begin{equation*}
+    \theta_\alpha(V_\alpha) \to E_x
+\end{equation*}
+is surjective. \par 
+
+\subsection{COROLLARY} \textit{If $E$ is any bundle, there exists an epimorphism $\varphi: X \times \mathbb{C}^m \to E$ for some integer $m$.}
+
+\subsection{COROLLARY} \textit{If $E$ is any bundle, there exists a bundle $F$ such that $E \oplus F$ is trivial.} \par 
+
+We are now in a position to prove the existence of a homotopy theoretic definition for $\Vect_n(X)$. We first introduce Grassmann manifolds. If $V$ is any vector space, and $n$ any integer, the set $G_n(V)$ is the set of all subspaces of $V$ of codimension $n$. If $V$ is given some Hermitian metric, each subspace of $V$ determines a projection operator. This defines a map $G_n(V) \to \End(V)$, where $\End(V)$ is the set of endomorphisms of $V$. We give $G_n(V)$ the topology induced by this map. \par 
+
+Suppose that $E$ is a bundle over a space $X$, $V$ is a vector space, and $\varphi: X \times V \to E$ is an epimorphism. If we map $X$ into $G_n(V)$ by assigining to $x$ the subspace $\ker(\varphi_x)$ this map is continuous for any metric on $V$ (here $n = \dim(E)$). We call the map $X \to G_n(V)$ the map induced by $\varphi$. \par 
+
+Let $V$ be a vector space, and let $F \subset G_n(V) \times V$ be the sub-bundle consisting of all points $(g, v)$ such that $v \in g$. Then, if $E = (G_n(V) \times V)/F$ is the quotient bundle, $E$ is called the \textit{classifying bundle} over $G_n(V)$. \par 
+
+Notice that if $E'$ is a bundle over $X$, and $\varphi: X \times V \to E'$ is an epimorphism, then if $f: X \to G_n(V)$ is the map induced by $\varphi$, we have $E' \cong f^*(E)$, where $E$ is the classifying bundle. \par 
+
+Suppose that $h$ is a metric on $V$. We denote by $G_n(V_h)$ the set $G_n(V)$ with the topology induced by $h$. If $h'$ is another metric on $V$, then the epimorphism  $G_n(V) \times V \to E$ (where $E$ is the classifying bundle) induces the identity map  $G_n(V_h) \to G_n(V_{h'})$. Thus the identity map is continuous. Thus, the topology on $G_n(V)$ does not depend on the metric. \par 
+
+Now consider the natural projections
+\begin{equation*}
+    \mathbb{C}^m \to \mathbb{C}^{m-1}
+\end{equation*}
+given by $(z_1, \ldots, z_m) \to (z_1, \ldots, z_{m-1})$. These induce continuous maps
+\begin{equation*}
+    \iota_{m-1}: G_n(\mathbb{C}^m) \to G_n(\mathbb{C}^{m-1}).
+\end{equation*}
+
+If $E_{(m)}$ denotes the classifying bundle over $G_n(\mathbb{C}^m)$ it is
+immediate that
+\begin{equation*}
+    \iota_{m-1}^*(E_{(m)}) \cong E_{(m-1)}
+\end{equation*}
+
+\subsection{THEOREM}\label{the:1.4.15} \textit{The map}
+\begin{equation*}
+    \lim_{\to m} [X, G_n(\mathbb{C}^m)] \to \Vect_n(X)
+\end{equation*}
+\textit{induced by $f \to f^*(E_{(m)})$ for $f: X \to G_n(\mathbb{C}^m)$, is an isomorphism for all compact Hausdorff spaces $X$.}

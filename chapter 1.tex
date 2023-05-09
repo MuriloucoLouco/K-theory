@@ -159,7 +159,7 @@ Since $h$ is continuous this implies that $P$ is continuous. Thus P is a project
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Vector bundles on compact spaces. }In order to proceed further, we must make some restriction on the sort of base spaces which we consider. We shall assume from now on that our base spaces are \textit{compact Hausdorff}. We leave it to the reader to notice which results hold for more general base spaces. \par 
+\section{Vector bundles on compact spaces.} In order to proceed further, we must make some restriction on the sort of base spaces which we consider. We shall assume from now on that our base spaces are \textit{compact Hausdorff}. We leave it to the reader to notice which results hold for more general base spaces. \par 
 
 Recall that if $f: X \to V$ is a continuous vector-valued function the support of $f$ (written $\supp f$) is the closure of $f^{-1}(V - \{0\})$. \par
 
@@ -448,7 +448,7 @@ Moreover a homomorphism $\varphi: E \to F$ determines a $C(X)$-module homomorphi
     \Gamma\varphi: \Gamma(E) \to \Gamma(F).
 \end{equation*}
 
-Thus $\Gamma$ is a functor from the category $\mathfrak{V}$ of vector bundles over $X$ to the category $\mathfrak{m}$ of $C(X)$-modules. If $E$ is trivial of dimension $n$. then $\Gamma(E)$ is free of rank $n$. If $F$ is also trivial then
+Thus $\Gamma$ is a functor from the category $\mathcal{V}$ of vector bundles over $X$ to the category $\mathcal{M}$ of $C(X)$-modules. If $E$ is trivial of dimension $n$. then $\Gamma(E)$ is free of rank $n$. If $F$ is also trivial then
 \begin{equation*}
     \Gamma: \HOM(E, F) \to \Hom_{C(X)}(\Gamma(E), \Gamma(F))
 \end{equation*}
@@ -457,3 +457,40 @@ is bijective. In fact, choosing isomorphisms $E \cong X \times V$, $F \cong X \t
     \HOM(E, F) \cong \Hom_C(V, W)^X &\cong C(X) \otimes \Hom_C(V, W) \\
     &\cong \Hom_{C(X)}(\Gamma(E), \Gamma(F))
 \end{align*}
+
+Thus $\Gamma$ induces an equivalence between the category $\mathcal{T}$ of trivial vector bundles to the category $\mathcal{F}$ of free $C(X)$-modules of finite rank. Let $\Proj(\mathcal{T})$ denote the sub-category of $\mathcal{V}$ whose objects are images of projection operators in $\mathcal{T}$ , and $\Proj(\mathcal{F}) \subset \mathcal{M}$ be defined similarly. Then it follows at once that  $\Gamma$ induces an equivalence of categories
+\begin{equation*}
+    \Proj(\mathcal{T}) \to \Proj(\mathcal{F})
+\end{equation*}
+
+But, by (\ref{cor:1.4.14}), $\Proj(\mathcal{T}) = \mathcal{V}$. By definition $\Proj(\mathcal{F})$ is the category of finitely-generated projective $C(X)$-modules. Thus we have established the following: \par 
+
+\textbf{PROPOSITION.} \textit{$\Gamma$ induces an equivalence between the category of vector bundles over $X$ and the category of finitely-generated projective modules over $C(X)$.} \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Additional structures.} In linear algebra one frequently considers vector spaces with some additional structure, and we can do the same for vector bundles. For example we have already discussed hermitian metrics. The next most obvious example is to consider non-degenerate bilinear forms. Thus if $V$ is a vector bundle a non-degenerate bilinear form on $V$ means an element $T$ of $\HOM(V \oplus V, 1)$ which induces a non-degenerate element of $Hom(V \oplus V, \mathbb{C})$ for all $x \in X$. Equivalently $T$ may be regarded as an element of $\ISO(V, V^*)$. The vector bundle $V$ together with this isomorphism $T$ will be called a \textit{self-dual} bundle. \par 
+
+If $T$ is symmetric, i.e., if $T_x$ is symmetric for all $x \in X$ , we shall call $(V, T)$ an \textit{orthogonal} bundle. If $T$ is skew-symmetric, i.e., if $T_x$ is skew-symmetric for all $x \in X$, we shall call $(V, T)$ a \textit{symplectic} bundle. \par 
+
+Alternatively we may consider pairs $(V, T)$ with $T \in \ISO(V, \bar{V})$, where $\bar{V}$ denotes the \textit{complex conjugate bundle} of $V$ (obtained by applying the "complex conjugate functor" to $V$). Such a $(V, T)$ may be called a \textit{self-conjugate} bundle. The isomorphism $T$ may also be thought of as an anti-linear isomorphism $V \to V$. As such we may form $T^2$. If $T^2 = \text{identity}$ we may call $(V, T)$ a \textit{real} bundle. In fact the subspace $W \subset V$ consisting of all $v \in V$ with $Tv = v$ has the structure of a\textit{ real vector bundle} and $V$ may be identified with $W \oplus_\mathbb{R} \mathbb{C}$, the \text{complexification} of $W$. If $T^2 = -\text{identity}$ then we may call $(V, T)$ a \text{quaternion} bundle. In fact, we can define a quaternion vector space structure on each $V_x$ by putting $j(v) = Tv$. The quaternions are generated over $\mathbb{R}$ by $i, j$ with $ij = -ij, i^2 = j^2 = -1$. \par 
+
+Now if $V$ has a hermitian metric $h$ then this gives an isomorphism $\bar{V} \to V^*$ and hence turns a self-conjugate bundle into a self-dual one. We leave it as an exercise to the reader to examine in detail the symmetric\footnote{The point is that $\GL(n, \mathbb{R})$ and $O(n, \mathbb{C})$ have the same maximal compact subgroup $O(n, \mathbb{C})$. Similar remarks apply in the skew case.} and skew-symmetric cases and to show that, up to homotopy, the notions of self-conjugate, orthogonal,symplectic, are essentially equivalent to self-dual, real, quaternion. Thus we may pick which ever alternative is more convenient at any particular stage. For example, the result of the preceeding sections extend immediately to real and quaternion vector bundles although the extension of (\ref{lem:1.4.3}) for example to orthogonal or sympletic bundles is not so immediate. On the other hand the properties of tensor products are more conveniently dealt with in the framework of bilinear forms. Thus the tensor product of $(V, T)$ and $(W, S)$ is $(V \oplus W, T \oplus S)$ and the symmetry properties of $T \oplus S$ follow at once from those of $T$ and $S$. Note in particular that the tensor product of two sympletic bundles is orthogonal. \par \hfill
+
+A self-conjugate bundle is a special case of a much more general notion. Let $F, G$ be two continuous functors on vector spaces. Then by an $F \to G$ bundle we will mean a pair $(V, T)$ where $V$ is a vector bundle and $T \in \ISO(F(V), G(V))$. Obviously a self-conjugate bundle arises by taking $F = \text{identity}$, $G = ^*$. Another example of some importance is to take $F$ and $G$ to be multiplication by a fixed integer $m$, i.e.,
+\begin{equation*}
+    F(V) = G(V) = V \oplus V \oplus \ldots \oplus V \qquad \text{($m$ times).}
+\end{equation*}
+
+Thus an $m \to m$ bundle (or more briefly an $m$-bundle) is a pair $(V, T)$ where $T \in \Aut(mV)$. The $m$-bundle $(V, T)$ is \textit{trivial} if there exists $S \in \Aut(V)$ so that $T = mS$. \par 
+
+In general for $F \to G$ bundles the analogue of (\ref{lem:1.4.3}) does not hold, i.e. homotopy does not imply isomorphism. Thus the good notion of equivalence must incorporate homotopy. For example, two $m$-bundles $(V_0, T_0)$ and $(V_1, T_1)$ will be called equivalent if there is an $m$-bundle $(W, S)$ on $X \times I$ so that
+\begin{equation*}
+    (V_i, T_i) \cong (W, S) \vert X \times \{i\}, \qquad i = 0, 1.
+\end{equation*}
+
+\textbf{Remark:} An $m$-bundle over $K$ should be thought of as a "mod $m$ vector bundle" over $S(X)$. \newpage 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{G-bundles over G-spaces.}

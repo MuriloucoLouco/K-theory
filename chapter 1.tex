@@ -493,4 +493,55 @@ In general for $F \to G$ bundles the analogue of (\ref{lem:1.4.3}) does not hold
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{G-bundles over G-spaces.}
+\section{G-bundles over G-spaces.} Suppose that $G$ is a topological group. Then by a \textit{G-space} we mean a topological space $X$ together with a given continuous action of $G$ on $X$, i.e., $G$ acts on $X$ and the map $G \times X \to X$ is continuous. A \textit{$G$-map} hetween $G$-spaces is a map commuting with the action of $G$. A $G$-space $E$ is a $G$-vector bundle over the $G$-space $X$ if
+\begin{enumerate}[(i)]
+    \item $E$ is a vector bundle over $E$,
+    \item the projection $E \to X$ is a $G$-maps
+    \item for each $g \in G$ the map $E_x \to E_{g(x)}$ is a vector space homomorphism.
+\end{enumerate}
+
+If $G$ is the group of one element then of course every space is a $G$-space and every vector bundle is a $G$-vector bundle. At the other extreme if $X$ is a point then $X$ is a $G$-space for all $G$ and a $G$-vector bundle over $X$ is just a (finite-dimensional) representation space of $G$. Thus $G$-vector bundles form a natural generalization including both ordinary vector bundles and $G$-modules. Much of the theory of vector bundles over compact spaces generalizes to $G$-vector bundles provided $G$ is also compact. This however, presupposes the basic facts about representations of compact groups. For the present, therefore we restrict ourselves to \textit{finite groups} where no questions of analysis are involved. \par \hfill
+
+There are two extreme kinds of $G$-space:
+\begin{enumerate}[(i)]
+    \item $X$ is a free $G$-space if $g \neq 1 \implies g(x) \neq x$,
+    \item $X$ is a trivial $G$-space if $g(x) = x$ for all $x \in X$, $g \in G$,
+\end{enumerate}
+
+We shall examine the structure of $G$-vector bundles in these two extreme cases. \par 
+
+Suppose then that $X$ is a free $G$-space and let $X/G$ be the orbit space. Then $\pi: X \to X/G$ is a finite covering map. Let $E$ be a $G$-vector bundle over $X$. Then $E$ is necessarily a free $G$-space. The orbit space $X/G$ has a natural vector bundle structure over $X/G$: in fact $E/G \to X/G$ is locally isomorphic to $E \to X$ and hence the local triviality of $E$ implies that of $E/G$. Conversely, suppose $V$ is a vector bundle over $X/G$. Then $\pi^*V$ is a $G$-vector bundle over $X$; in fact, $\pi^*V \subset X \times V$ and $G$ acts on $X \times V$ by $g(x, v) = (g(x), v)$. It is clear that $E \to E/G$ and $V \to \pi^*V$ are inverse functors. Thus we have
+
+\subsection{PROPOSITION}\label{prop:1.6.1} \textit{If $X$ is $G$-free $G$-vector bundles over $X$ correspond bijectively to vector bundles over $X/G$ by $E \to E/G$.} \par 
+
+Before discussing trivial $G$-spaces let us recall the basic fact about representations of finite groups, namely that there existsa finite set $V_1, \ldots, V_k$ of irreducible representations of $G$ so that any representation $V$ of $G$ is isomorphic to a unique direct sum $\sum_{i=1}^k n_i V_i$. Now for any two $G$-modules (i.e., representation spaces) $V, W$ we can define the vector space $\Hom_G(V, W)$ of $G$-homomorphisms. Then we have
+\begin{equation*}
+\Hom_G(V_i, V_j) \cong
+    \begin{cases}
+        0          & i \neq j \\
+        \mathbb{C} & i = j
+    \end{cases}
+\end{equation*}
+
+Hence for any $V$ it follows that the natural map
+\begin{equation*}
+    \sum V_i \otimes \Hom_G(V_i, V) \to V
+\end{equation*}
+is a $G$-isomorphism. In this form we can extend the result to $G$-bundles over a trivial $G$-space. In fact, if $E$ is any $G$-bundle over the trivial $G$-space $X$ we can define the morphism $\Av \in \END E$ by
+\begin{equation*}
+    \Av(e) = \frac{1}{|G|} \sum_{g \in G} g(e)
+\end{equation*}
+where $|G|$ denotes the order of $G$ (This depends on the fact that, $X$ being $G$-trivial, each $g \in G$ defines an endomorphism of E). It is immediate that $\Av$ is a projection operator for $E$ and so its image, the invariant subspace of $E$, is a vector bundle. We denote this by $E^G$ and call it the invariant \textit{sub-bundle} of $E$. Thus if $E, F$ are two $G$-bundles then $\Hom_G(E, F) = (\Hom(E, F))^G$ is again a vector bundle. In particular taking $E$ to be the trivial bundle $\textbf{V}_i = X \times V_i$ with its natural $G$-action we can consider the natural bundle map
+\begin{equation*}
+    \sum_{i=1}^k \textbf{V}_i \otimes \Hom_G(\textbf{V}_i, F) \to F
+\end{equation*} \par 
+
+We have already observed that for a $G$-module $F$ this is a $G$-isomorphism. In other words for any $G$-bundle $F$ over $X$ this is a $G$-isomorphism for all $x \in X$. Hence it is an isomorphism of $G$-bundles. Thus every $G$-bundle $F$ is isomorphic to a $G$-bundle of the form $\sum \textbf{V}_i \otimes E_i$ Where $E_i$ is a vector bundle with trivial $G$-action. Moreover the $E_i$ are unique up to isomorphissm. In fact we have
+\begin{align*}
+    \Hom_G(\textbf{V}_i, F) & \cong \sum_{j=1}^k  \Hom_G(\textbf{V}_i, \textbf{V}_j \otimes E_j) \\
+    & \cong \sum_{j=1}^k  \Hom_G(\textbf{V}_i, \textbf{V}_j) \otimes E_j \\
+    & \cong E_i.
+\end{align*}
+Thus we have established
+
+\subsection{PROPOSITION} \label{prop:1.6.2} Let $X$ be a trivial $G$-space, $V_1, \ldots, V_k$ a complete set of irreducibl $G$-modules, $\textbf{V}_i = X \times V_i$, the corresponding $G$-bundles. Thus every $G$-bundle $F$ over $X$ is isomorphic to a direct sum $\sum \textbf{V}_i \otimes E_i$ where the $E_i$ are vector bundles with trivial $G$-action. Moreover the $E_i$ are unique up to isomorphism and are given by $E_i = \Hom_G(\textbf{V}_i, F)$.

@@ -8,8 +8,8 @@ I'm transcribing the book while i read it, so it will take a while.
     - [x] 1.1 Basic definitions
     - [x] 1.2 Operations on vector bundles
     - [x] 1.3 Sub-bundles and quotient bundles
-    - [ ] 1.4 Vector bundles on compact spaces
-    - [ ] 1.5 Additional structures
+    - [x] 1.4 Vector bundles on compact spaces
+    - [x] 1.5 Additional structures
     - [ ] 1.6 G-bundles over G-spaces
 - [ ] Chapter 2 K-Theory
     - [ ] 2.1 Definitions

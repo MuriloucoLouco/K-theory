@@ -159,7 +159,7 @@ Since $h$ is continuous this implies that $P$ is continuous. Thus P is a project
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Vector bundles on compact spaces.} In order to proceed further, we must make some restriction on the sort of base spaces which we consider. We shall assume from now on that our base spaces are \textit{compact Hausdorff}. We leave it to the reader to notice which results hold for more general base spaces. \par 
+\section{Vector bundles on compact spaces.}\label{sec:1.4} In order to proceed further, we must make some restriction on the sort of base spaces which we consider. We shall assume from now on that our base spaces are \textit{compact Hausdorff}. We leave it to the reader to notice which results hold for more general base spaces. \par 
 
 Recall that if $f: X \to V$ is a continuous vector-valued function the support of $f$ (written $\supp f$) is the closure of $f^{-1}(V - \{0\})$. \par
 
@@ -357,7 +357,7 @@ is called \textit{exact} if for each $x \in X$ the sequence of vector space homo
 \end{equation*}
 is exact. \par 
 
-\subsection{COROLLARY} Suppose that \begin{tikzcd} 0 \arrow[r] & E' \arrow[r, "\varphi'"] & E \arrow[r, "\varphi''"] & E'' \arrow[r] & 0\end{tikzcd} is an exact sequence of bundles over $X$. Then there exists an homorphism $E \cong E' \oplus E"$. \par 
+\subsection{COROLLARY}\label{cor:1.4.11} Suppose that \begin{tikzcd} 0 \arrow[r] & E' \arrow[r, "\varphi'"] & E \arrow[r, "\varphi''"] & E'' \arrow[r] & 0\end{tikzcd} is an exact sequence of bundles over $X$. Then there exists an homorphism $E \cong E' \oplus E"$. \par 
 
 \textbf{Proof:} Give $E$ a metric. Then $E \cong E' \oplus (E')^\bot$. However, $(E')^\bot \cong E''$. \par \hfill
 
@@ -367,7 +367,7 @@ A subspace $V \subset \Gamma(E)$ is said to be \textit{ample} if
 \end{equation*}
 is a surjection, where $\varphi(x, s) = s(x)$.
 
-\subsection{LEMMA}\label{1.4.12} \textit{If $E$ is any bundle over a compact Hausdorff space $X$, then $\Gamma(E)$ contains a finite dimensional ample subspace.} \par 
+\subsection{LEMMA}\label{lem:1.4.12} \textit{If $E$ is any bundle over a compact Hausdorff space $X$, then $\Gamma(E)$ contains a finite dimensional ample subspace.} \par 
 
 \textbf{Proof:} Let $\{U_\alpha\}$ be a finite open covering of $X$ so that $E \vert U_\alpha$ is trivial for each $\alpha$, and let $\{p_\alpha\}$ be a partition of unity with $\supp p_\alpha \subset U_\alpha$. Since $E \vert U_\alpha$ is trivial we can find a finite-dimensional ample subspace $V_\alpha \subset \Gamma(E \vert U_\alpha)$. Now define
 \begin{equation*}
@@ -469,13 +469,13 @@ But, by (\ref{cor:1.4.14}), $\Proj(\mathcal{T}) = \mathcal{V}$. By definition $\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Additional structures.} In linear algebra one frequently considers vector spaces with some additional structure, and we can do the same for vector bundles. For example we have already discussed hermitian metrics. The next most obvious example is to consider non-degenerate bilinear forms. Thus if $V$ is a vector bundle a non-degenerate bilinear form on $V$ means an element $T$ of $\HOM(V \oplus V, 1)$ which induces a non-degenerate element of $Hom(V \oplus V, \mathbb{C})$ for all $x \in X$. Equivalently $T$ may be regarded as an element of $\ISO(V, V^*)$. The vector bundle $V$ together with this isomorphism $T$ will be called a \textit{self-dual} bundle. \par 
+\section{Additional structures.}\label{sec:1.5} In linear algebra one frequently considers vector spaces with some additional structure, and we can do the same for vector bundles. For example we have already discussed hermitian metrics. The next most obvious example is to consider non-degenerate bilinear forms. Thus if $V$ is a vector bundle, a non-degenerate bilinear form on $V$ means an element $T$ of $\HOM(V \otimes V, 1)$ which induces a non-degenerate element of $\Hom(V_x \otimes V_x, \mathbb{C})$ for all $x \in X$. Equivalently $T$ may be regarded as an element of $\ISO(V, V^*)$. The vector bundle $V$ together with this isomorphism $T$ will be called a \textit{self-dual} bundle. \par 
 
 If $T$ is symmetric, i.e., if $T_x$ is symmetric for all $x \in X$ , we shall call $(V, T)$ an \textit{orthogonal} bundle. If $T$ is skew-symmetric, i.e., if $T_x$ is skew-symmetric for all $x \in X$, we shall call $(V, T)$ a \textit{symplectic} bundle. \par 
 
-Alternatively we may consider pairs $(V, T)$ with $T \in \ISO(V, \bar{V})$, where $\bar{V}$ denotes the \textit{complex conjugate bundle} of $V$ (obtained by applying the "complex conjugate functor" to $V$). Such a $(V, T)$ may be called a \textit{self-conjugate} bundle. The isomorphism $T$ may also be thought of as an anti-linear isomorphism $V \to V$. As such we may form $T^2$. If $T^2 = \text{identity}$ we may call $(V, T)$ a \textit{real} bundle. In fact the subspace $W \subset V$ consisting of all $v \in V$ with $Tv = v$ has the structure of a\textit{ real vector bundle} and $V$ may be identified with $W \oplus_\mathbb{R} \mathbb{C}$, the \text{complexification} of $W$. If $T^2 = -\text{identity}$ then we may call $(V, T)$ a \text{quaternion} bundle. In fact, we can define a quaternion vector space structure on each $V_x$ by putting $j(v) = Tv$. The quaternions are generated over $\mathbb{R}$ by $i, j$ with $ij = -ij, i^2 = j^2 = -1$. \par 
+Alternatively we may consider pairs $(V, T)$ with $T \in \ISO(V, \bar{V})$, where $\bar{V}$ denotes the \textit{complex conjugate bundle} of $V$ (obtained by applying the "complex conjugate functor" to $V$). Such a $(V, T)$ may be called a \textit{self-conjugate} bundle. The isomorphism $T$ may also be thought of as an anti-linear isomorphism $V \to V$. As such we may form $T^2$. If $T^2 = \text{identity}$ we may call $(V, T)$ a \textit{real} bundle. In fact the subspace $W \subset V$ consisting of all $v \in V$ with $Tv = v$ has the structure of a\textit{ real vector bundle} and $V$ may be identified with $W \otimes_\mathbb{R} \mathbb{C}$, the \text{complexification} of $W$. If $T^2 = -\text{identity}$ then we may call $(V, T)$ a \text{quaternion} bundle. In fact, we can define a quaternion vector space structure on each $V_x$ by putting $j(v) = Tv$. The quaternions are generated over $\mathbb{R}$ by $i, j$ with $ij = -ij, i^2 = j^2 = -1$. \par 
 
-Now if $V$ has a hermitian metric $h$ then this gives an isomorphism $\bar{V} \to V^*$ and hence turns a self-conjugate bundle into a self-dual one. We leave it as an exercise to the reader to examine in detail the symmetric\footnote{The point is that $\GL(n, \mathbb{R})$ and $O(n, \mathbb{C})$ have the same maximal compact subgroup $O(n, \mathbb{C})$. Similar remarks apply in the skew case.} and skew-symmetric cases and to show that, up to homotopy, the notions of self-conjugate, orthogonal,symplectic, are essentially equivalent to self-dual, real, quaternion. Thus we may pick which ever alternative is more convenient at any particular stage. For example, the result of the preceeding sections extend immediately to real and quaternion vector bundles although the extension of (\ref{lem:1.4.3}) for example to orthogonal or sympletic bundles is not so immediate. On the other hand the properties of tensor products are more conveniently dealt with in the framework of bilinear forms. Thus the tensor product of $(V, T)$ and $(W, S)$ is $(V \oplus W, T \oplus S)$ and the symmetry properties of $T \oplus S$ follow at once from those of $T$ and $S$. Note in particular that the tensor product of two sympletic bundles is orthogonal. \par \hfill
+Now if $V$ has a hermitian metric $h$ then this gives an isomorphism $\bar{V} \to V^*$ and hence turns a self-conjugate bundle into a self-dual one. We leave it as an exercise to the reader to examine in detail the symmetric\footnote{The point is that $\GL(n, \mathbb{R})$ and $O(n, \mathbb{C})$ have the same maximal compact subgroup $O(n, \mathbb{C})$. Similar remarks apply in the skew case.} and skew-symmetric cases and to show that, up to homotopy, the notions of self-conjugate, orthogonal,symplectic, are essentially equivalent to self-dual, real, quaternion. Thus we may pick which ever alternative is more convenient at any particular stage. For example, the result of the preceeding sections extend immediately to real and quaternion vector bundles although the extension of (\ref{lem:1.4.3}) for example to orthogonal or sympletic bundles is not so immediate. On the other hand the properties of tensor products are more conveniently dealt with in the framework of bilinear forms. Thus the tensor product of $(V, T)$ and $(W, S)$ is $(V \otimes W, T \otimes S)$ and the symmetry properties of $T \otimes S$ follow at once from those of $T$ and $S$. Note in particular that the tensor product of two sympletic bundles is orthogonal. \par \hfill
 
 A self-conjugate bundle is a special case of a much more general notion. Let $F, G$ be two continuous functors on vector spaces. Then by an $F \to G$ bundle we will mean a pair $(V, T)$ where $V$ is a vector bundle and $T \in \ISO(F(V), G(V))$. Obviously a self-conjugate bundle arises by taking $F = \text{identity}$, $G = ^*$. Another example of some importance is to take $F$ and $G$ to be multiplication by a fixed integer $m$, i.e.,
 \begin{equation*}
@@ -493,9 +493,9 @@ In general for $F \to G$ bundles the analogue of (\ref{lem:1.4.3}) does not hold
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{G-bundles over G-spaces.} Suppose that $G$ is a topological group. Then by a \textit{G-space} we mean a topological space $X$ together with a given continuous action of $G$ on $X$, i.e., $G$ acts on $X$ and the map $G \times X \to X$ is continuous. A \textit{$G$-map} hetween $G$-spaces is a map commuting with the action of $G$. A $G$-space $E$ is a $G$-vector bundle over the $G$-space $X$ if
+\section{G-bundles over G-spaces.} Suppose that $G$ is a topological group. Then by a \textit{G-space} we mean a topological space $X$ together with a given continuous action of $G$ on $X$, i.e., $G$ acts on $X$ and the map $G \times X \to X$ is continuous. A \textit{$G$-map} between $G$-spaces is a map commuting with the action of $G$. A $G$-space $E$ is a $G$-vector bundle over the $G$-space $X$ if
 \begin{enumerate}[(i)]
-    \item $E$ is a vector bundle over $E$,
+    \item $E$ is a vector bundle over $X$,
     \item the projection $E \to X$ is a $G$-maps
     \item for each $g \in G$ the map $E_x \to E_{g(x)}$ is a vector space homomorphism.
 \end{enumerate}
@@ -512,9 +512,9 @@ We shall examine the structure of $G$-vector bundles in these two extreme cases.
 
 Suppose then that $X$ is a free $G$-space and let $X/G$ be the orbit space. Then $\pi: X \to X/G$ is a finite covering map. Let $E$ be a $G$-vector bundle over $X$. Then $E$ is necessarily a free $G$-space. The orbit space $X/G$ has a natural vector bundle structure over $X/G$: in fact $E/G \to X/G$ is locally isomorphic to $E \to X$ and hence the local triviality of $E$ implies that of $E/G$. Conversely, suppose $V$ is a vector bundle over $X/G$. Then $\pi^*V$ is a $G$-vector bundle over $X$; in fact, $\pi^*V \subset X \times V$ and $G$ acts on $X \times V$ by $g(x, v) = (g(x), v)$. It is clear that $E \to E/G$ and $V \to \pi^*V$ are inverse functors. Thus we have
 
-\subsection{PROPOSITION}\label{prop:1.6.1} \textit{If $X$ is $G$-free $G$-vector bundles over $X$ correspond bijectively to vector bundles over $X/G$ by $E \to E/G$.} \par 
+\subsection{PROPOSITION}\label{prop:1.6.1} \textit{If $X$ is $G$-free, $G$-vector bundles over $X$ correspond bijectively to vector bundles over $X/G$ by $E \to E/G$.} \par 
 
-Before discussing trivial $G$-spaces let us recall the basic fact about representations of finite groups, namely that there existsa finite set $V_1, \ldots, V_k$ of irreducible representations of $G$ so that any representation $V$ of $G$ is isomorphic to a unique direct sum $\sum_{i=1}^k n_i V_i$. Now for any two $G$-modules (i.e., representation spaces) $V, W$ we can define the vector space $\Hom_G(V, W)$ of $G$-homomorphisms. Then we have
+Before discussing trivial $G$-spaces let us recall the basic fact about representations of finite groups, namely that there exists a finite set $V_1, \ldots, V_k$ of irreducible representations of $G$ so that any representation $V$ of $G$ is isomorphic to a unique direct sum $\sum_{i=1}^k n_i V_i$. Now for any two $G$-modules (i.e., representation spaces) $V, W$ we can define the vector space $\Hom_G(V, W)$ of $G$-homomorphisms. Then we have
 \begin{equation*}
 \Hom_G(V_i, V_j) \cong
     \begin{cases}
@@ -536,7 +536,7 @@ where $|G|$ denotes the order of $G$ (This depends on the fact that, $X$ being $
     \sum_{i=1}^k \textbf{V}_i \otimes \Hom_G(\textbf{V}_i, F) \to F
 \end{equation*} \par 
 
-We have already observed that for a $G$-module $F$ this is a $G$-isomorphism. In other words for any $G$-bundle $F$ over $X$ this is a $G$-isomorphism for all $x \in X$. Hence it is an isomorphism of $G$-bundles. Thus every $G$-bundle $F$ is isomorphic to a $G$-bundle of the form $\sum \textbf{V}_i \otimes E_i$ Where $E_i$ is a vector bundle with trivial $G$-action. Moreover the $E_i$ are unique up to isomorphissm. In fact we have
+We have already observed that for a $G$-module $F$ this is a $G$-isomorphism. In other words for any $G$-bundle $F$ over $X$ this is a $G$-isomorphism for all $x \in X$. Hence it is an isomorphism of $G$-bundles. Thus every $G$-bundle $F$ is isomorphic to a $G$-bundle of the form $\sum \textbf{V}_i \otimes E_i$ Where $E_i$ is a vector bundle with trivial $G$-action. Moreover the $E_i$ are unique up to isomorphism. In fact we have
 \begin{align*}
     \Hom_G(\textbf{V}_i, F) & \cong \sum_{j=1}^k  \Hom_G(\textbf{V}_i, \textbf{V}_j \otimes E_j) \\
     & \cong \sum_{j=1}^k  \Hom_G(\textbf{V}_i, \textbf{V}_j) \otimes E_j \\
@@ -544,4 +544,52 @@ We have already observed that for a $G$-module $F$ this is a $G$-isomorphism. In
 \end{align*}
 Thus we have established
 
-\subsection{PROPOSITION} \label{prop:1.6.2} Let $X$ be a trivial $G$-space, $V_1, \ldots, V_k$ a complete set of irreducibl $G$-modules, $\textbf{V}_i = X \times V_i$, the corresponding $G$-bundles. Thus every $G$-bundle $F$ over $X$ is isomorphic to a direct sum $\sum \textbf{V}_i \otimes E_i$ where the $E_i$ are vector bundles with trivial $G$-action. Moreover the $E_i$ are unique up to isomorphism and are given by $E_i = \Hom_G(\textbf{V}_i, F)$.
+\subsection{PROPOSITION}\label{prop:1.6.2} \textit{Let $X$ be a trivial $G$-space, $V_1, \ldots, V_k$ a complete set of irreducible $G$-modules, $\textbf{V}_i = X \times V_i$, the corresponding $G$-bundles. Thus every $G$-bundle $F$ over $X$ is isomorphic to a direct sum $\sum \textbf{V}_i \otimes E_i$ where the $E_i$ are vector bundles with trivial $G$-action. Moreover the $E_i$ are unique up to isomorphism and are given by $E_i = \Hom_G(\textbf{V}_i, F)$.} \par 
+
+We return now to the case of a general (compact) $G$-space $X$ and we shall show how to extend the results of \cref{sec:1.4} to $G$-bundles. \par 
+
+Observe first that, if $E$ is a $G$-bundle, $G$ acts naturally on $\Gamma(E)$ by
+\begin{equation*}
+    (gs)(x) = g(s(g^{-1}(x)))
+\end{equation*}
+
+A section $s$ is invariant if $gs = g$ for all $g \in G$. The set of all invariant sections forms a subspace $\Gamma(E)^G$ of $\Gamma(E)$. The averaging operator
+\begin{equation*}
+    \Av = \frac{1}{|G|} \sum g
+\end{equation*}
+
+Defines as usual a homomorphism $\Gamma(E) \to \Gamma(E)^G$ which is the identity on $\Gamma(E)^G$.
+
+\subsection{LEMMA}\label{lem:1.6.3} \textit{Let $X$ be a compact $G$-space $Y \subset X$ a closed sub $G$-space (i.e., invariant by $G$) and let $E$ be a $G$-bundle over $X$. Then any invariant section $s: Y \to E \vert Y$ extends to an invariant section over $X$.} \par 
+
+\textbf{Proof:} by (\ref{lem:1.4.1}) we can extend $s$ to some section $t$ of $E$ over $X$. Then $\Av(t)$ is an invariant section of $E$ over $X$, while over $Y$ we have
+\begin{equation*}
+    \Av(t) = \Av(s) = s
+\end{equation*}
+since $s$ is invariant. Thus $\Av(t)$ is the required extension. \par \hfill
+
+If $E$, $F$ are two $G$-bundles then $\Hom(E, F)$ is also a $G$-bundle and we have
+\begin{equation*}
+    \Gamma(\Hom(E, F))^G \cong \HOM_G(E, F)
+\end{equation*}
+Hence the $G$-analogues of (\ref{lem:1.4.2}) and (\ref{lem:1.4.3}) follow at once from (\ref{lem:1.6.3}). Thus we have
+
+\subsection{LEMMA}\label{lem:1.6.4} \textit{Let $Y$ be a compact $G$-space, $X$ a $G$-space, $f_t: Y \to X \quad (0 \leq t \leq 1)$ a $G$-homotopy and E a $G$-vector bundle over $X$. Then $f^*_0 E$ and $f^*_1 E$ are isomorphic $G$-bundles.} \par
+
+A $G$-homotopy means of course a $G$-map $F: Y \times I \to X$ where $I$ is the unit interval with trivial $G$-action. A $G$-space is $G$-contractible if it is $G$-homotopy equivalent to a point. In particular, the cone over a $G$-space is always $G$-contractible. By a \textit{trivial} $G$-bundle we shall mean a $G$-bundle isomorphic to a product $X \times V$ where $V$ is a $G$-module. With these definitions (\ref{lem:1.4.4}) - (\ref{cor:1.4.11}) extend without change to $G$-bundles. We have only to observe that if$ $h is a metric for $E$ then $\Av(h)$ is an invariant metric. \par 
+
+To extend (\ref{lem:1.4.12}) we observe that if $V \subset \Gamma(E)$ is ample then $\sum_{g \in G} gV \subset \Gamma(E)$ is ample and invariant. This leads at once to the appropriate extension of (\ref{cor:1.4.14}).  \par
+
+In extending (\ref{the:1.4.15}) we have to consider Grassmannians of $G$-subspaces of $m \sum_{i=1}^k V_i$ for $m \to \infty$, where as before $V_1, \ldots, V_k$ denote a complete set of irreducible $G$-modules. We leave the formulation to the reader. \par
+
+Finally, consider the module interpretation of vector bundles. Write $A = C(X)$. Then if $X$ is a $G$-space $G$ acts on $A$ as a group of algebra automorphisms. If $E$ is a $G$-vector bundle over $X$ then $\Gamma(E)$ is a projective $A$-module and $G$ acts on $\Gamma(E)$, the relation between the $A$- and $G$- actions being
+\begin{equation*}
+    g(as) = g(a)g(s) \qquad a \in A, g \in G, s \in \Gamma(E). 
+\end{equation*}
+
+We can look at this another way if we introduce the "twisted group algebra" $B$ of $G$ over $A$, namely elements of $B$ are linear combinations $\sum_{g \in G} a_g g$ with $a \in A$ and the product is defined by
+\begin{equation*}
+    (ag)(a'g') = (ag(a'))gg'.
+\end{equation*}
+
+In fact, $\Gamma(E)$ is then just a $B$-module. We leave it as an exercise to the reader to show that the category of $G$-vector bundles over $X$ is equivalent to the category of $B$-modules which are finitely generated and projective over $A$. \newpage

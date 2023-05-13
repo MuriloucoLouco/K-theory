@@ -11,6 +11,8 @@
 \usepackage{tikz-cd}
 \usepackage{hyperref}
 \usepackage[nameinlink]{cleveref}
+\usepackage{pdfpages}
+\usepackage{adjustbox}
 
 \setcounter{secnumdepth}{2}
 
@@ -43,12 +45,21 @@
 \DeclareMathOperator{\Av}{Av}
 
 \title{K-Theory}
-\author{Michael Atiyah}
+\author{
+    Lectures by \\
+    M. F. Atiyah
+\and
+    Notes by \\
+    D. W. Anderson
+}
 \date{Fall 1964}
 
 \begin{document}
 
+\includepdf[pages=-]{cover.pdf}
+
 \maketitle
+\include{myintroduction.tex}
 \tableofcontents
 
 \include{introduction.tex}

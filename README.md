@@ -2,7 +2,7 @@ I'm transcribing the book while i read it, so it will take a while.
 
 # Progress
 
-- [ ] Cover
+- [x] Cover
 - [x] Introduction
 - [x] Chapter 1 Vector Bundles
     - [x] 1.1 Basic definitions

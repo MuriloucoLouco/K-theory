@@ -12,7 +12,7 @@ I'm transcribing the book while i read it, so it will take a while.
     - [x] 1.5 Additional structures
     - [x] 1.6 G-bundles over G-spaces
 - [ ] Chapter 2 K-Theory
-    - [ ] 2.1 Definitions
+    - [x] 2.1 Definitions
     - [ ] 2.2 The periodicity theorem
     - [ ] 2.3 K_G(X)
     - [ ] 2.4 Cohomology properties of K

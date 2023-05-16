@@ -222,4 +222,179 @@ We multiply the $1$ on the second row by $t$ and obtain a homotopy between $\mat
 
 We shall now establish a simple algebraic formula in $K(P)$. We write $[E^0, z, E^\infty]$ for $[(E^0, z, E^\infty)]$.
 
-\subsection{PROPOSITION}\label{pro:2.2.7}
+\subsection{PROPOSITION}\label{pro:2.2.7} \textit{For any polynomial clutching function $p$ for $E^0, E^\infty)$, we have the identity}
+\begin{equation*}
+    ([E^0, p, E^\infty] - [E^0, 1, E^0])([L][H] - [1]) = 0.
+\end{equation*} \par 
+
+\textbf{Proof:} From the second part of the last lemma, together with the last proposition, we see that
+\begin{equation*}
+    (L^{-1} \otimes E^0, zp, E^\infty) \oplus \left( \sum_{k = 0}^n L^k \otimes E^0, 1, \sum_{k = 0}^n L^k \otimes E^0  \right)
+\end{equation*}
+\begin{equation*}
+    \cong (E^0, p, E^\infty) \oplus \left( \sum_{k = 1}^n L^k \otimes E^0, 1, \sum_{k = 1}^n L^k \otimes E^0  \right) \oplus (L^{-1} \otimes E^0, z, E^0) .
+\end{equation*}
+Thus, in $K(P)$,
+\begin{equation*}
+    [L^{-1} \otimes E^0, zp, E^\infty] \oplus [E^0, 1, E^0] = [E^0, p, E^\infty] \oplus [L^{-1} \otimes E^0, z, E^0]
+\end{equation*}
+Since $[1, z, L] = [H^{-1}]$,
+\begin{equation*}
+    [L^{-1}][H^{-1}][E^0, p, E^\infty] \oplus [E^0, 1, E^0] = [E^0, p, E^\infty] \oplus [L^{-1}][H^{-1}][E^0, 1, E^0]
+\end{equation*} \par 
+
+In particular, if we put $E^0 = 1, p = z, E^\infty = L$, we obtain the formula
+\begin{equation*}
+    ([H] - [1])([L][H] - [1]) = 0
+\end{equation*}
+which is part of our main theorem. \par 
+
+We now turn our attention to linear clutching functions. First, suppose that $T$ is an endomorphism of a finite dimensional vector space $E$, and let $S$ be a circle in the complex plane which does not pass through any eigenvalue of $T$. Then
+\begin{equation*}
+    Q = \frac{1}{2 \pi i} \int_S (z - T)^{-1} dz
+\end{equation*}
+is a projection operator in $E$ which commutes with $T$. The decomposition $E = E_+ \oplus E_-$, $E_+ = QE$, $E_- = (1 - Q)E$ is therefore invariant under $T$, so that $T$ can be written as $T = T_+ \oplus T_-$. Then $T_+$ has all of its eigenvalues \textit{inside} $S$, while $T_-$ has all of its eigenvalues \textit{outside} $S$. This is, of course, just the spectral decomposition of $T$ corresponding to the two components of the complement of $S$. \par 
+
+We shall now extend these results to vector bundles, but first we make a remark on notation. So far $z$ and hence $p(z)$ have been sections over $S$. However, they extend in a natural way to sections over the whole of $L$. It will also be convenient to include the $\infty$-section of $P$ in certain statements. Thus, if we assert that $p(z) = az + b$ is an isomorphism outside $S$, we shall take this to include the statement that $a$ is an isomorphism. \par 
+
+\subsection{PROPOSITION}\label{pro:2.2.8} \textit{Let $P$ be a linear clutching
+function for $(E^0, E^\infty)$, and define endomorphisms $Q^0, Q^\infty$ of $E^0, E^\infty$ by putting}
+\begin{equation*}
+    Q^0_x = \frac{1}{2 \pi i} \int_{S_x} p_x^{-1} dp_x \qquad Q^\infty_x = \frac{1}{2 \pi i} \int_{S_x} dp_x p_x^{-1}
+\end{equation*}
+\textit{Then $Q^0$ and $Q^\infty$ are projection operators, and}
+\begin{equation*}
+    pQ^0 = Q^\infty p .
+\end{equation*}
+\textit{Write $E^i_+ = Q^i E^i$, $E^i_- = (1 - Q^i) E^i$, $i = 0, \infty$, so that $E^i = E^i_+ \oplus E^i_-$. Then $p$ is compatible with these decompositions, so that $p = p_+ \oplus p_-$. Moreover, $p_+$ is an isomorphism outside $S$, and $p_-$ is an isomorphism inside $S$.}
+
+\textbf{Proof:} It suffices to verify these statements at each point $x \in X$. In other words, we may assume that $X$ is a point, $L = C$, and $z$ is just a complex number. Since $p(z)$ is an isomorphism for $|z| = 1$, we can find a real number $\alpha$ with $\alpha > 1$ such that $p(\alpha): E^0 \to E^\infty$ is an isomorphism. For simplicity of computation, we identify $E^0$ with $E^\infty$ by this isomorphism. Next, we consider the conformal transformation
+\begin{equation*}
+    w = \frac{1 - \alpha z}{z - \alpha}
+\end{equation*}
+which preserves the unit circle and its inside. Substituting for $z$, we find (since we have taken $p(\alpha) = 1$)
+\begin{equation*}
+    p(z) = \frac{w - T}{w + \alpha}
+\end{equation*}
+where $T \in \End(E^0)$. Hence
+\begin{align*}
+    Q^0 &= \frac{1}{2 \pi i} \int_{|z| = 1} p^{-1} dp \\
+    &= \frac{1}{2 \pi i} \int_{|w| = 1} (-(w + \alpha)^{-1} dw + (w - T)^{-1} dw) .\\
+    &= \frac{1}{2 \pi i} \int_{|w| = 1} (w - T)^{-1} dw \qquad \text{since } |\alpha| > 1.
+\end{align*}
+Similarly,
+\begin{equation*}
+    Q^\infty = \frac{1}{2 \pi i} \int_{|w| = 1} (dw)(w - T)^{-1} = Q^0,
+\end{equation*}
+so our assertions follow from the corresponding statements concerning a linear transformation $T$.
+
+\subsubsection{COROLLARY}\label{cor:2.2.9} \textit{Let $p$ be as in (\ref{pro:2.2.8}), and write}
+\begin{equation*}
+    p_+ = a_+ z + b_+, \qquad p_- = a_- z + b_- .
+\end{equation*}
+\textit{Then, if $p(t) = p_+(t) \oplus p_-(t)$, where}
+\begin{equation*}
+    p_+(t) = a_+ z + tb_+, \qquad p_-(t) = ta_- z + b_-, \qquad 0 \leq t \leq 1,
+\end{equation*}
+\textit{we obtain a homotopy of linear clutching functions connecting $p$ with $a_+ z \oplus b_-$. Thus}
+\begin{equation*}
+    (E^0, p, E^\infty) \cong (E^0_+, z, L \otimes E^0_+) \oplus (E^0_-, 1, E^0_-) .
+\end{equation*}
+
+\textbf{Proof:} The last part of the last lemma implies that $p_+(t)$ and $p_-(t)$ are isomorphisms on $S$ for $0 \leq t \leq 1$. Thus, $p(t)$ is a clutching function for $0 \leq t \leq 1$. Thus,
+\begin{align*}
+    (E^0, p, E^\infty) &\cong (E^0, p(1), E^\infty) \\
+    &\cong (E^0_+, a_+ z, E^\infty_+) \oplus (E^0_-, b_-, E^\infty_-) .
+\end{align*}
+Since $a_+: L \otimes E^0_+ \to E^\infty_+$, $b_-: E^0_- \to E^\infty_-$ are necessarily isomorphisms, we see that
+\begin{align*}
+    (E^0_+, a_+ z, E^\infty_+) &\cong (E^0_+, z, L \otimes E^\infty_+) \\
+    (E^0_-, b_-, E^\infty_-) &\cong (E^0_-, 1, E^0_-) .
+\end{align*}
+Again, consider a polynomial clutching function $p$ of degree $\leq n$. Then $\mathcal{L}^n(p)$ is a linear clutching function for $(V^0, V^\infty)$ where
+\begin{equation*}
+    V^0 = \sum_{k=0}^\infty L^k \otimes E^0, \qquad V^\infty = E^\infty \oplus \sum_{k=1}^\infty L^k \otimes E^0
+\end{equation*}
+Hence, it defines a decomposition
+\begin{equation*}
+    V^0 = V^0_+ \oplus V^0_-
+\end{equation*}
+as above. To express the dependence of $V^0_+$ on $p$ and $n$, we write
+\begin{equation*}
+    V^0_+ = V_n(E^0, p, E^\infty) .
+\end{equation*}
+Note that this is a vector bundle on $X$. If $p_t$ is a homotopy of polynomial clutching functions of degree $\leq n$, it follows by constructing $V_n$ over $X \times I$ that
+\begin{equation*}
+    V_n(E^0, p_0, E^\infty) \cong V_n(E^0, p_1, E^\infty) .
+\end{equation*}
+Hence, from the homotopies used in proving the two parts of (\ref{lem:2.2.6}), we obtain
+\begin{align*}
+    V_{n+1}(E^0, p, E^\infty) &\cong V_n(E^0, p, E^\infty), \\
+    V_{n+1}(L^{-1} \otimes E^0, zp, E^\infty) &\cong V_n(E^0, p, E^\infty) \oplus (L^{-1} \otimes E^0)
+\end{align*}
+or, equivalently
+\begin{equation*}
+    V_{n+1}(E^0, zp, L \otimes E^\infty) \cong L \otimes V_n(E^0, p, E^\infty) \oplus E^0 .
+\end{equation*} \par 
+Combining this with the above corollary and (\ref{pro:2.2.5}), we obtain the following formula in $K(P)$:
+\begin{align*}
+    [E^0, p, E^\infty] + \left\{\sum_{k=1}^n [L^k \otimes E^0] \right\}[1] =& [V_n(E^0, p, E^\infty)][H^{-1}] \\
+    &+ \left\{\sum_{k=0}^n [L^k \otimes E^0] - [V_n(E^0, p, E^\infty)] \right\}[1]
+\end{align*}
+and hence the formula
+\begin{equation*}
+    [E^0, p, E^\infty] = [V_n(E^0, p, E^\infty)]([H^{-1}] - [1]) + [E^0][1] .
+\end{equation*}
+This shows that $[V^+_p] \in K(X)$ completely determines $[E^0, p, E^\infty] \in K(P)$. We can now prove our theorem. \par
+
+Let $t$ be an indeterminant over the ring $K(X)$. Then the map $t \to [H]$ induces a $K(X)$-algebra homomorphism (since $([H] - [1])([L][H] - [1]) = 0$)
+\begin{equation*}
+    \mu: K(X)[t] / ((t-1)([L]t-1)) \to K(P) .
+\end{equation*}
+To prove that $\mu$ is an isomorphism, we explicitly construct an inverse. \par 
+
+First, suppose that $f$ is a clutching function for $(E^0, E^\infty)$. Let $f_n$ be the sequence of Cesaro means of its Fourier series, and put $p_n = z^n f_n$. Then, if $n$ is sufficiently large, $p_n$ is a polynomial clutching function (of degree $\leq 2n$) for $(E^0, L^n \otimes E^\infty)$. We define
+\begin{equation*}
+    \nu_n(f) = [V_{2n}(E^0, p_n, L^n \otimes E^\infty)](t^{n-1} - t^n) + [E^0]t^n .
+\end{equation*}
+Now, for sufficiently large $n$, the linear segment joining $p_{n+l}$ and $zp_n$ provides a homotopy of polynomial clutching functions of degree $\leq 2(n + 1)$. Hence, by the formulae following (\ref{cor:2.2.9}),
+\begin{align*}
+    V_{2n+2}(E^0, p_{n+1}, L^{n+1} \otimes E^\infty) &\cong V_{2n+2}(E^0, zp_n, L^{n+1} \otimes E^\infty) \\
+    &\cong V_{2n+1}(E^0, zp_n, L^{n+1} \otimes E^\infty) \\
+    &\cong L \otimes V_{2n}(E^0, p_n, L^n \otimes E^\infty) \oplus E^0 .
+\end{align*}
+Hence
+\begin{align*}
+    \nu_{n+1}(f) &= \{[L] [V_{2n}(E^0, p_n, L^n \otimes E^\infty)] + [E^0] \}(t^n - t^{n+1}) + [E^0]t^{n+1} \\
+    &= \nu_n(f)
+\end{align*}
+since $(t - l)([L]t - 1) = 0$. Thus, $\nu_n(f)$ is independent of $n$ if $n$ is sufficiently large, and thus depends only on $f$. We write it as $\nu(f)$. If $g$ is sufficiently close to $f$, and $n$ is sufficiently large, the linear segment joining $f_n$ and $g_n$ provides a homotopy of polynomial clutching functions of degree $\leq 2n$, and hence $\nu(f) = \nu_n(f) = \nu_n(g) = \nu(g)$. Thus, $\nu(f)$ is a locally constant function of $f$, and hence depends only on the homotopy class of $f$. However, if $E$ is any bundle on $P$, and $f$ a clutching function defining $E$, we define $\nu(E) = \nu(f)$, and $\nu(E)$ will be well defined and depend only on the isomorphism class of $E$. Since $\nu(E)$ is clearly additive for $+$, it induces a group homomorphism
+\begin{equation*}
+    \nu: K(P) \to K(X)[t] / ((t-1)([L]t-1)) .
+\end{equation*}
+From our definition, it is clear that this is a $K(X)$-module homomorphism. \par 
+
+First, we check that $\mu \nu$ is the identity. With our notation as above,
+\begin{align*}
+    \mu\nu(E) &= \mu\{[V_{2n}(E^0, p_n, L^n \otimes E^\infty)](t^{n-1} - t^n) + [E^0]t^n \} \\
+    &= [V_{2n}(E^0, p_n, L^n \otimes E^\infty)]([H]^{n-1} - [H^n]) + [E^0][H]^n \\
+    &= [E^0, p_n, L^n \otimes E^\infty] [H]^n \\
+    &= [E^0, f_n, E^\infty] \\
+    &= [E^0, f, E^\infty] \\
+    &= E .
+\end{align*}
+Since $K(P)$ is additively generated by elements of the form $[E]$, this proves that $\mu\nu$ is the identity. \par 
+
+Finally, we show that $\nu\mu$. is the identity. Since $\nu\mu$ is a homomorphism of $K(X)$-modules, it suffices to show that $\nu\mu(t^n) = t^n$ for all $n \geq 0$. However,
+\begin{align*}
+    \nu\mu(t^n) &= \nu(H^n) \\
+    &= \nu[1, z^{-n}, L^{-n}] \\
+    &= [V_{2n}(1, 1, 1)](t^{n-1} - t^n) + [1]t^n \\
+    &= t^n, \qquad \text{since } V_{2n}(1, 1, 1) = 0 .
+\end{align*}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{$K_G(X).$}

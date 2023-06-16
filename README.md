@@ -14,7 +14,7 @@ I'm transcribing the book while i read it, so it will take a while.
 - [ ] Chapter 2 K-Theory
     - [x] 2.1 Definitions
     - [x] 2.2 The periodicity theorem
-    - [ ] 2.3 K_G(X)
+    - [x] 2.3 K_G(X)
     - [ ] 2.4 Cohomology properties of K
     - [ ] 2.5 Computations of K^*(X) for some X
     - [ ] 2.6 Multiplication in K^*(X, Y)

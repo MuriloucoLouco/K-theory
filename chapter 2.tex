@@ -406,3 +406,88 @@ If $E$ is a $G$-vector bundle over $X$ then $P(E)$ is a $G$-space. If $E = L \op
 \begin{equation*}
     K_G(X)[t]/(t[L]-1)(t-1) \to K_G(P(L \oplus 1))
 \end{equation*}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Cohomology theory properties of $K$.} We next define $K(X, Y)$ for a compact pair $(X, Y)$. We shall then be able to establish, in a purely formal fashion, certain properties of $K$. Since the proofs are formal, the theorems are equally valid for any "cohomology theory" satisfying certain axioms. We leave this formalization to the reader. \par 
+
+Let $\mathcal{C}$ denote the category of compact spaces, $\mathcal{C}^*$ the category of compact spaces with distinguished basepoint, and $\mathcal{C}^2$ the category of compact pairs. We define functors:
+
+\begin{center}
+\begin{tikzcd}
+\mathcal{C}^2 \arrow[r] & \mathcal{C}^* \\
+\mathcal{C} \arrow[r]   & \mathcal{C}^2
+\end{tikzcd}
+\end{center}
+
+by sending a pair $(X, Y)$ to $X/Y$ with basepoint $Y/Y$ (if $Y \neq \emptyset$, the empty set, $X/Y$ is understood to be the disjoint union of $X$ with a point.) We send a space $X$ to the pair $(X, \emptyset)$. The composite $\mathcal{C} \to \mathcal{C}^*$ is given by $X \to X^*$, where $X^*$ denotes $X/\emptyset$. \par
+
+If $X$ is in $\mathcal{C}^*$, we define $\tilde{K}(X)$ to be the kernel of the map $i^*: K(X) \to K(x_O)$ where $i: x_0 \to X$ is the inclusion of the base-point. If $c: X \to x_0$ is the collapsing map then $c^*$ induces a splitting $K(X) \cong \tilde{K}(X) \oplus K(x_0)$. This splitting is clearly natural for maps in $\mathcal{C}^*$. Thus $\tilde{K}$ is a functor on $\mathcal{C}^*$. Also, it is clear that $K(X) \cong \tilde{K}(X^*)$. We define $K(X, Y)$ by $K(X, Y) = \tilde{K}(X/Y)$. In particular $K(X, \emptyset) = K(X)$. Since $\tilde{K}$ is a functor on $\mathcal{C}^*$ it follows that $K(X, Y)$ is a contravariant functor of $(X, Y)$ in $\mathcal{C}^2$. \par 
+
+We now introduce the "smash product" operation in $\mathcal{C}^*$. If $X, Y \in \mathcal{C}$ we put
+
+\begin{equation*}
+    X \wedge Y = X \times Y / X \vee Y
+\end{equation*}
+
+where $X \vee Y = X \times y_0 \cup x_0 \times Y$, $x_0, y_0$ being the base-points of $X, Y$ respectively. For any three spaces $X, Y, Z \in \mathcal{C}^*$ we have a natural homeomorphism
+
+\begin{equation*}
+    X \wedge (Y \wedge Z) \approx (X \wedge Y) \wedge Z
+\end{equation*}
+
+and we shall identify these spaces by the homeomorphism. \par 
+
+Let $I$ denote the unit interval $[0, 1]$ and let $\partial I$ = $\{0\} \cup \{1\}$ be its boundary. We take $I/\partial I \in \mathcal{C}^*$ as our standard model of the circle $S^1$. Similarly if $I^n$ denotes the unit cube in $\mathbb{R}^n$ we take $I^n/\partial I^n$ as our model of the $n$-sphere $S^n$. Then we have a natural homeomorphism
+
+\begin{equation*}
+S^n \approx S^1 \wedge S^1 \wedge \ldots \wedge S^1 \qquad \text{($n$ factors)}
+\end{equation*}
+
+For $X \in \mathcal{C}^*$ the space $S^1 \wedge X  \in \mathcal{C}^*$ is called the \textit{reduced suspension} of $X$, and often written as $SX$. The $n$-th iterated suspension $SS \ldots SX$ ($n$ times) is naturally homeomorphic to $S^n \wedge X$ and is written briefly as $S^n X$.
+
+\begin{align*}
+    \tilde{K}^{-n}(X) &= \tilde{K}(S^n X) & \textit{ for } X \in \mathcal{C}^* \\
+    K^{-n}(X, Y) &= \tilde{K}^{-n}(X/Y) = \tilde{K}(S^n(X/Y)) & \textit{ for } (X, Y) \in \mathcal{C}^2 \\
+    K^{-n}(X) &= K^{-n}(X, \emptyset) = \tilde{K}(S^n(X^*)) & \textit{ for } X \in \mathcal{C}
+\end{align*}
+
+It is clear that all these are contravariant functors on the appropriate categories. \par
+
+Before proceeding further we define the \textit{cone on} $X$ by
+
+\begin{equation*}
+    CX = I \times X/\{0\} \times X
+\end{equation*}
+
+Thus $C$ is a functor $C: \mathcal{C} \to \mathcal{C}^*$. We identify $X$ with the subspace $\{l\} \times X$ of $CX$. The space $CX/X = I \times X/\partial I \times X$ is called the \textit{unreduced suspension} of $X$. Note that this is a functor $\mathcal{C} \to \mathcal{C}^*$ whereas the reduced suspension $S$ is a functor $\mathcal{C}^* \to \mathcal{C}^*$. If $X \in \mathcal{C}^*$ with base-point $x_0$ then we have a natural inclusion map
+
+\begin{equation*}
+    I \approx Cx_0 / x_0 \to CX/X
+\end{equation*}
+
+and the quotient space obtained by collapsing $I$ in $CX/X$ is just $SX$. Thus by (\ref{lem:1.4.8}) $p: CX/X \to SX$ induces an isomorphism $K(SX) \cong K(CX/X)$ and hence also an isomorphism $\tilde{K}(SX) \approx K(CX,X)$. Thus the use of $SX$ for both the reduced and unreduced suspensions leads to no problems. \par
+
+If $(X, Y) \in \mathcal{C}^2$ we define $X \cup CY$ to be the space obtained from $X$ and $CY$ by identifying the subspaces $Y \subset X$ and $\{1\} \times Y \subset CY$. Taking the base-point of $CY$ as base-point of $X \cup CY$ we have
+
+\begin{equation*}
+    X \cup CY \in \mathcal{C}^*
+\end{equation*}.
+
+We note that $X$ is a subspace of $X \cup CY$ and that there is a natural homeomorphism
+
+\begin{equation*}
+    X \cup CY/X \approx CY/Y
+\end{equation*}.
+
+Thus if $Y \in \mathcal{C}^*$,
+
+\begin{align*}
+    K(X \cup CY, X) &\cong K(CY, Y) \\
+    &\cong \tilde{K}(SY) \\
+    &= \tilde{K}^{-1}(Y)
+\end{align*}
+
+Now we begin with a simple lemma
